@@ -47,3 +47,13 @@ When Pages is available for the repository's current visibility and plan, choose
 - No unverified revenue, online lift, user adoption, team size, or production traffic figures were added.
 
 Last content update: October 2026.
+
+
+## Readability system
+
+Guidance: [Typography skill by petekp](https://github.com/petekp/agent-skills/blob/main/skills/typography/SKILL.md), including its fluid typography and internationalization references. Used as a design reference for this task; no external code or global skill installation is required.
+
+- Phi (1.618) defines the 16 / 25.888 / 41.886 px headline scale and related spacing rhythm; the main / sidebar grid uses phi squared (2.618:1) where width permits. These are layout choices rather than claims that a ratio guarantees readability.
+- Primary reading text uses fluid 16–17px sizing in relative units, with 1.618 English leading and 1.75 Korean leading. English prose is capped at 66ch, Korean at 42ic within the available column. Metadata uses at least 14px; small tags and status labels use 12px.
+- Headings and links use darker greens for contrast, paragraphs retain complete content and natural wrapping, and section navigation has no emoji. Awards remain immediately below publications.
+- At tablet widths the page switches to one reading column before prose becomes cramped. Font scaling, 200% text sizing, keyboard focus, and 320–1440px layouts are checked before deployment.

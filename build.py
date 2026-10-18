@@ -128,7 +128,7 @@ def plain(text):
     return unescape(re.sub(r"<[^>]+>", "", text))
 
 
-def markdown(content):
+def markdown(content, lang):
     labels = content["sections"]
     lines = [f'# {content["name"]}', '', content["role"], '',
              'seungminshin00@gmail.com · +82 10 4522 0340 · https://github.com/seummin', '', plain(content["intro"]), '']
@@ -153,7 +153,9 @@ def markdown(content):
     lines.extend([f'## {labels["skills"]}', ''])
     lines.extend(f'- {item["title"]}: {item["text"]}' for item in content['skills'])
     lines.extend(['', f'## {labels["interests"]}', '', ', '.join(content['interests']), '', f'## {labels["awards"]}', '', content['awardTitle'], '', content['awardDetail'], '', content['awardNote'], ''])
-    return '\n'.join(lines)
+    language_links = '[한국어](./README.md) · [English](./resume-en.md)'
+    portrait = f'<img src="./portrait.png" alt="{"신승민 프로필 사진" if lang == "ko" else "Portrait of Seungmin Shin"}" width="108" align="right">'
+    return language_links + '\n\n' + portrait + '\n\n' + '\n'.join(lines)
 
 
 class PageCheck(HTMLParser):
@@ -188,7 +190,8 @@ if __name__ == '__main__':
         assert len(DATA['ko'][key]) == len(DATA['en'][key]), f'Language mismatch: {key}'
     for lang, filename in (('ko', 'index.html'), ('en', 'en.html')):
         (ROOT / filename).write_text(page(lang, DATA[lang]), encoding='utf-8')
-        (ROOT / f'resume-{lang}.md').write_text(markdown(DATA[lang]), encoding='utf-8')
+        (ROOT / f'resume-{lang}.md').write_text(markdown(DATA[lang], lang), encoding='utf-8')
+    (ROOT / 'README.md').write_text(markdown(DATA['ko'], 'ko'), encoding='utf-8')
     for filename in ('index.html', 'en.html'):
         parser = PageCheck()
         parser.feed((ROOT / filename).read_text(encoding='utf-8'))

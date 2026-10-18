@@ -1,3 +1,7 @@
+[한국어](./README.md) · [English](./resume-en.md)
+
+<img src="./portrait.png" alt="Portrait of Seungmin Shin" width="108" align="right">
+
 # SEUNGMIN SHIN
 
 AI Engineer · LLM & AI Agents

@@ -1,3 +1,7 @@
+[한국어](./README.md) · [English](./resume-en.md)
+
+<img src="./portrait.png" alt="신승민 프로필 사진" width="108" align="right">
+
 # 신승민
 
 AI Engineer · LLM & AI Agents

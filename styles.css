@@ -65,7 +65,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .language-switch { display: inline-flex; gap: .5rem; margin-bottom: 1rem; }
 .language-switch a { display: inline-flex; gap: 6px; align-items: center; justify-content: center; min-height: 44px; padding: 8px 12px; border: 1px solid #8fa196; border-radius: 4px; color: var(--heading); text-decoration: none; font-size: .8125rem; line-height: 1.25; font-weight: 600; }
 .language-switch a[aria-current] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: #eaf3ed; }
-.language-switch span[aria-hidden] { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 1rem; line-height: 1; }
 h1 { color: var(--display-accent); font-size: clamp(2.125rem, 1.5rem + 1.5vw, var(--text-display)); font-weight: 850; letter-spacing: .075em; text-transform: uppercase; line-height: 1.15; }
 html:lang(ko) h1 { letter-spacing: .025em; }
 .alternate-name { color: var(--muted); font-size: var(--text-small); margin-top: var(--space-xs); letter-spacing: .01em; }
@@ -74,7 +73,6 @@ address { border-left: 1px solid var(--line); padding-left: 20px; font-size: var
 address a, address .location { display: flex; align-items: center; gap: 10px; padding-block: 4px; }
 address a { color: var(--muted); }
 address a span { text-decoration: underline; text-underline-offset: 3px; }
-.contact-icon { width: 18px; height: 18px; flex: 0 0 18px; fill: currentColor; color: #58685d; }
 .intro { display: grid; grid-template-columns: 128px minmax(0,1fr); align-items: center; gap: var(--space-lg); padding: var(--space-lg) 0; border-bottom: 1px solid var(--line); }
 .intro p { max-inline-size: var(--measure); }
 .portrait { display: block; width: 128px; max-width: 100%; height: auto; aspect-ratio: 3/4; margin: 0 auto; border-radius: 2px; }
@@ -93,11 +91,9 @@ h3 { color: var(--heading); font-size: 1.1875rem; font-weight: 700; }
 .entry { margin-bottom: var(--space-lg); }
 .entry:last-child { margin-bottom: 0; }
 .entry-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--space-xs) 1rem; }
-.entry-heading h3 { display: flex; align-items: baseline; gap: 10px; font-size: 1.1875rem; letter-spacing: 0; min-width: 0; flex: 1 1 20rem; }
-.entry-badge { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 28px; width: 28px; height: 30px; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; font-size: 1.375rem; font-weight: 400; line-height: 1; }
+.entry-heading h3 { display: block; font-size: 1.1875rem; letter-spacing: 0; min-width: 0; flex: 1 1 20rem; }
 .date { color: var(--muted); font-size: var(--text-small); font-variant-numeric: tabular-nums; }
 .entry-heading .date { white-space: nowrap; flex-shrink: 0; }
-#experience .entry-heading .date { padding-left: 0; }
 .entry-subtitle { color: var(--muted); font-size: var(--text-small); margin: var(--space-xs) 0 var(--space-sm); line-height: 1.6; }
 .entry-summary { font-size: var(--text-base); max-inline-size: var(--measure); margin-bottom: var(--space-sm); line-height: var(--body-leading); }
 .entry-bullets { max-inline-size: var(--measure); padding-left: 22px; font-size: var(--text-base); line-height: var(--body-leading); }
@@ -133,7 +129,6 @@ footer a { display: inline-flex; align-items: center; min-height: 44px; text-dec
 .print-button { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; border: 1px solid #a3b2a8; padding: 8px 12px; border-radius: 4px; background: #fff; color: var(--muted); font-family: inherit; font-size: .8125rem; font-weight: 500; line-height: 1.25; cursor: pointer; }
 .print-button[hidden] { display: none; }
 .print-button:hover { border-color: var(--accent); color: var(--accent); }
-.print-button svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.5; }
 @media (min-width: 62rem) { #projects .entry + .entry, #research .entry + .entry { border-top: 1px solid var(--line); padding-top: var(--space-lg); } }
 @media (max-width: 62rem) {
   body { padding: 24px 16px; }
@@ -146,7 +141,7 @@ footer a { display: inline-flex; align-items: center; min-height: 44px; text-dec
   .sidebar { padding-left: 20px; }
   .entry-heading { flex-direction: column; align-items: flex-start; }
   .entry-heading h3 { flex-basis: auto; }
-  .entry-heading .date { padding-left: 38px; }
+  .entry-heading .date { padding-left: 0; }
   .sidebar h2 { font-size: 1.125rem; letter-spacing: .025em; }
 }
 @media (max-width: 50rem) {
@@ -166,7 +161,6 @@ footer a { display: inline-flex; align-items: center; min-height: 44px; text-dec
   html:lang(ko) h1 { font-size: 2.4rem; letter-spacing: .01em; }
   .role { font-size: 1.125rem; }
   address { border-left: 0; padding: 0; margin-top: var(--space-md); }
-  .contact-icon { width: 16px; height: 16px; flex-basis: 16px; }
   .intro { display: block; padding: var(--space-md) 0; }
   .portrait { float: left; width: 96px; margin: 4px 24px 12px 0; }
   .intro::after { display: block; clear: both; content: ""; }
@@ -174,7 +168,7 @@ footer a { display: inline-flex; align-items: center; min-height: 44px; text-dec
   h2 { font-size: 1.5rem; }
   .entry-heading { display: block; }
   .entry-heading h3 { font-size: 1.125rem; }
-  .entry-heading .date { padding-left: 38px; margin-top: var(--space-xs); }
+  .entry-heading .date { padding-left: 0; margin-top: var(--space-xs); }
   .entry-subtitle { margin-top: .75rem; }
   .section { margin-bottom: var(--space-lg); }
   .sidebar { gap: 0 24px; }
@@ -195,7 +189,6 @@ footer a { display: inline-flex; align-items: center; min-height: 44px; text-dec
   .alternate-name { font-size: 9pt; }
   .role { font-size: 12pt; }
   address { border-left: 1px solid #ddd; padding-left: 18px; font-size: 8pt; line-height: 1.8; margin: 0; }
-  .contact-icon { width: 11px; height: 11px; flex-basis: 11px; }
   .intro { display: grid; grid-template-columns: 64px 1fr; gap: 20px; padding: 16px 0; font-size: 9pt; line-height: 1.6; margin-bottom: 20px; }
   .portrait { float: none; width: 64px; margin: 0; }
   .intro::after { display: none; }
@@ -207,7 +200,6 @@ footer a { display: inline-flex; align-items: center; min-height: 44px; text-dec
   .entry + .entry { border: 0; padding-top: 0; }
   .entry-heading { display: flex; flex-direction: row; align-items: center; }
   .entry-heading h3 { font-size: 10pt; }
-  .entry-badge { flex-basis: 19px; width: 19px; height: 22px; font-size: 17px; }
   .entry-heading .date { padding-left: 0; }
   .entry-subtitle { font-size: 8pt; margin: 4px 0 7px; }
   .entry-summary, .entry-bullets { font-size: 9pt; }

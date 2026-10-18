@@ -53,7 +53,8 @@ Last content update: October 2026.
 
 Guidance: [Typography skill by petekp](https://github.com/petekp/agent-skills/blob/main/skills/typography/SKILL.md), including its fluid typography and internationalization references. Used as a design reference for this task; no external code or global skill installation is required.
 
-- Phi (1.618) defines the 16 / 25.888 / 41.886 px headline scale and related spacing rhythm; the main / sidebar grid uses phi squared (2.618:1) where width permits. These are layout choices rather than claims that a ratio guarantees readability.
-- Primary reading text uses fluid 16–17px sizing in relative units, with 1.618 English leading and 1.75 Korean leading. English prose is capped at 66ch, Korean at 42ic within the available column. Metadata uses at least 14px; small tags and status labels use 12px.
-- Headings and links use darker greens for contrast, paragraphs retain complete content and natural wrapping, and section navigation has no emoji. Awards remain immediately below publications.
-- At tablet widths the page switches to one reading column before prose becomes cramped. Font scaling, 200% text sizing, keyboard focus, and 320–1440px layouts are checked before deployment.
+- Headline sizes retain the earlier type scale. Reading density takes priority over mathematical column ratios: the sheet is capped at 1200px, with a 240px supporting sidebar and a 32px gutter.
+- Primary text remains 16–17px. Korean leading is 1.6 with a 48ic measure cap; English leading is 1.55 with a 78ch cap. At widths up to 960px, the main content uses one column. Mobile gutters are 20px.
+- Entry spacing is 32px, section spacing 48px, and bullet margins 6px. Titles, dates and role metadata form one visual group. Result strips use 22px values and 12px vertical padding.
+- Editorial review: shorten the opening profile to specialization, scope and one academic credential. Keep project problem statements, individual responsibilities, alternatives, evaluation populations and measured outcomes explicit. Do not replace evidence with unsupported summary claims.
+- Maintain text-only navigation, visible keyboard focus, contrast, 200% text support and awards below publications.

@@ -101,8 +101,8 @@ h3 { color: var(--heading); font-size: 18px; font-weight: 700; }
 .school:last-child { margin-bottom: 0; }
 .skill { margin-bottom: 20px; }
 .interest-list { padding: 0; list-style: none; font-size: 14px; line-height: 1.9; }
-.sidebar .award-result { color: var(--accent); font-weight: 650; margin-top: 10px; }
-.sidebar .award-note { color: var(--muted); font-size: 12px; margin-top: 8px; }
+.award-result { color: var(--accent); font-weight: 650; margin-top: 10px; }
+.award-note { color: var(--muted); font-size: 12px; margin-top: 8px; }
 footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: 18px; font-size: 11px; color: var(--muted); }
 footer a { text-decoration: none; }
 .print-button { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); padding: 5px 10px; border-radius: 4px; background: #fff; color: var(--muted); font-family: inherit; font-size: 11px; font-weight: 500; line-height: 1.6; cursor: pointer; }
@@ -199,5 +199,5 @@ footer a { text-decoration: none; }
   .sidebar .section { break-inside: avoid; }
   .sidebar h2 { font-size: 11pt; margin-bottom: 14px; }
   .sidebar h3 { font-size: 9pt; }
-  .sidebar p, .interest-list, .sidebar p.date, .sidebar .award-note { font-size: 8pt; }
+  .sidebar p, .interest-list, .sidebar p.date, .award-note { font-size: 8pt; }
 }

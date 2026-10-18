@@ -142,6 +142,14 @@ BERT / WordNet / Interactive Evaluation
 - Unified Inference and Confidence Calibration Method Using Large Language Models
   Seungmin Shin et al.. HCLT-KACL · 2025. 발표.
 
+## 수상
+
+ORAK Game Agent Challenge
+
+Track 2 종합 1위
+
+Track 1·2 리더보드 모두 1위 · 팀 수상, 2026
+
 ## 학력
 
 ### 성균관대학교
@@ -169,11 +177,3 @@ BERT / WordNet / Interactive Evaluation
 ## 연구 관심 분야
 
 Large Language Models, AI Agents, Agentic Memory, Agentic Search, Evaluation Frameworks, Controllable Generation
-
-## 수상
-
-ORAK Game Agent Challenge
-
-Track 2 종합 1위
-
-Track 1·2 리더보드 모두 1위 · 팀 수상, 2026

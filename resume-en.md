@@ -142,6 +142,14 @@ BERT / WordNet / Interactive Evaluation
 - Unified Inference and Confidence Calibration Method Using Large Language Models
   Seungmin Shin et al.. HCLT-KACL · 2025. Presented.
 
+## Awards
+
+ORAK Game Agent Challenge
+
+1st place overall · Track 2
+
+1st on both Track 1 & 2 leaderboards · Team award, 2026
+
 ## Education
 
 ### Sungkyunkwan University
@@ -169,11 +177,3 @@ B.S. in Computer Science and Engineering | Mar 2017 – Feb 2023
 ## Research Interests
 
 Large Language Models, AI Agents, Agentic Memory, Agentic Search, Evaluation Frameworks, Controllable Generation
-
-## Awards
-
-ORAK Game Agent Challenge
-
-1st place overall · Track 2
-
-1st on both Track 1 & 2 leaderboards · Team award, 2026

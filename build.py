@@ -71,7 +71,7 @@ def page(lang, content):
   <link rel="alternate" hreflang="en" href="./en.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23477560'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='38' fill='white'%3ES%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="./PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=3">
+  <link rel="stylesheet" href="./styles.css?v=4">
   <script src="./print.js" defer></script>
 </head>
 <body id="top">
@@ -105,17 +105,17 @@ def page(lang, content):
         <section class="section" id="publications" aria-labelledby="publications-heading">
           {heading('publications', labels)}<ol class="publication-list">{''.join(pubs)}</ol>
         </section>
-      </main>
-      <aside class="sidebar">
-        <section class="section" aria-labelledby="education-heading">{heading('education', labels)}{schools}</section>
-        <section class="section" aria-labelledby="skills-heading">{heading('skills', labels)}{skills}</section>
-        <section class="section" aria-labelledby="interests-heading">{heading('interests', labels)}<ul class="interest-list">{interests}</ul></section>
-        <section class="section" aria-labelledby="awards-heading">
+        <section class="section awards" id="awards" aria-labelledby="awards-heading">
           {heading('awards', labels)}
           <h3><a href="https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025">{e(content['awardTitle'])}</a></h3>
           <p class="award-result">{e(content['awardDetail'])}</p>
           <p class="award-note">{e(content['awardNote'])}</p>
         </section>
+      </main>
+      <aside class="sidebar">
+        <section class="section" aria-labelledby="education-heading">{heading('education', labels)}{schools}</section>
+        <section class="section" aria-labelledby="skills-heading">{heading('skills', labels)}{skills}</section>
+        <section class="section" aria-labelledby="interests-heading">{heading('interests', labels)}<ul class="interest-list">{interests}</ul></section>
       </aside>
     </div>
     <footer><span>{e(content['updated'])}</span><button class="print-button" type="button" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7z"/></svg>{e(content['print'])}</button><a href="#top">{e(content['backToTop'])} ↑</a></footer>
@@ -147,6 +147,7 @@ def markdown(content, lang):
     for item in content["publications"]:
         title = f'[{item["title"]}]({item["url"]})' if item.get('url') else item['title']
         lines.extend([f'- {title}', f'  {plain(item["authors"])}. {item["venue"]}. {item["status"]}.', ''])
+    lines.extend([f'## {labels["awards"]}', '', content['awardTitle'], '', content['awardDetail'], '', content['awardNote'], ''])
     lines.extend([f'## {labels["education"]}', ''])
     for item in content["education"]:
         lines.extend([f'### {item["title"]}', '', f'{item["degree"]} | {item["date"]}', ''])
@@ -154,7 +155,7 @@ def markdown(content, lang):
         lines.append('')
     lines.extend([f'## {labels["skills"]}', ''])
     lines.extend(f'- {item["title"]}: {item["text"]}' for item in content['skills'])
-    lines.extend(['', f'## {labels["interests"]}', '', ', '.join(content['interests']), '', f'## {labels["awards"]}', '', content['awardTitle'], '', content['awardDetail'], '', content['awardNote'], ''])
+    lines.extend(['', f'## {labels["interests"]}', '', ', '.join(content['interests']), ''])
     language_links = '[한국어 웹 이력서](https://seummin.github.io/CV/) · [English CV website](https://seummin.github.io/CV/en.html)\n\n[한국어 텍스트](./README.md) · [English text](./resume-en.md)'
     portrait = f'<img src="./portrait.png" alt="{"신승민 프로필 사진" if lang == "ko" else "Portrait of Seungmin Shin"}" width="108" align="right">'
     return language_links + '\n\n' + portrait + '\n\n' + '\n'.join(lines)

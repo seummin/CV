@@ -153,7 +153,7 @@ def markdown(content, lang):
     lines.extend([f'## {labels["skills"]}', ''])
     lines.extend(f'- {item["title"]}: {item["text"]}' for item in content['skills'])
     lines.extend(['', f'## {labels["interests"]}', '', ', '.join(content['interests']), '', f'## {labels["awards"]}', '', content['awardTitle'], '', content['awardDetail'], '', content['awardNote'], ''])
-    language_links = '[한국어](./README.md) · [English](./resume-en.md)'
+    language_links = '[한국어 웹 이력서](https://seummin.github.io/CV/) · [English CV website](https://seummin.github.io/CV/en.html)\n\n[한국어 텍스트](./README.md) · [English text](./resume-en.md)'
     portrait = f'<img src="./portrait.png" alt="{"신승민 프로필 사진" if lang == "ko" else "Portrait of Seungmin Shin"}" width="108" align="right">'
     return language_links + '\n\n' + portrait + '\n\n' + '\n'.join(lines)
 

@@ -1,4 +1,6 @@
-[한국어](./README.md) · [English](./resume-en.md)
+[한국어 웹 이력서](https://seummin.github.io/CV/) · [English CV website](https://seummin.github.io/CV/en.html)
+
+[한국어 텍스트](./README.md) · [English text](./resume-en.md)
 
 <img src="./portrait.png" alt="Portrait of Seungmin Shin" width="108" align="right">
 

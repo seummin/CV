@@ -5,7 +5,7 @@ LLM · AI Agent · Agentic Memory · Evaluation
 - **한국어**: [이력서 웹페이지](./index.html) · [텍스트 버전](./resume-ko.md)
 - **English**: [CV webpage](./en.html) · [Text version](./resume-en.md)
 
-The repository is private. Its README renders the Korean CV directly, and `resume-en.md` renders the English CV. The HTML files provide the full website design when opened locally; GitHub Pages is not enabled.
+The website is published at https://seummin.github.io/CV/ (Korean) and https://seummin.github.io/CV/en.html (English). GitHub Pages uses the public repository’s main branch and root directory. The README also renders the Korean CV directly, and `resume-en.md` renders the English CV.
 
 ## Preview and edit
 

@@ -46,7 +46,7 @@ def icon(name):
 
 def page(lang, content):
     labels = content["sections"]
-    badges = {'experience': ['🏢', '🎓'], 'projects': ['🧠', '🛡️', '🎮', '📊', '🛍️'], 'research': ['🔎', '💬', '🧩']}
+    badges = {'experience': ['', ''], 'projects': ['🧠', '🛡️', '🎮', '📊', '🛍️'], 'research': ['🔎', '💬', '🧩']}
     assert all(len(content[key]) == len(badges[key]) for key in badges)
     blocks = "".join(f'<section class="section" id="{key}" aria-labelledby="{key}-heading">{heading(key, labels)}{"".join(entry(item, badge) for item, badge in zip(content[key], badges[key]))}</section>' for key in ("experience", "projects", "research"))
     pubs = []
@@ -71,7 +71,7 @@ def page(lang, content):
   <link rel="alternate" hreflang="en" href="./en.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23477560'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='38' fill='white'%3ES%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="./PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=5">
+  <link rel="stylesheet" href="./styles.css?v=6">
   <script src="./print.js" defer></script>
 </head>
 <body id="top">

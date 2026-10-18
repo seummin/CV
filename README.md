@@ -2,8 +2,10 @@
 
 LLM · AI Agent · Agentic Memory · Evaluation
 
-- **한국어**: [이력서 웹페이지](./index.html) · [텍스트 버전](./resume-ko.md)
-- **English**: [CV webpage](./en.html) · [Text version](./resume-en.md)
+- **한국어**: [이력서 웹페이지](https://seummin.github.io/CV/) · [텍스트 버전](./resume-ko.md)
+- **English**: [CV webpage](https://seummin.github.io/CV/en.html) · [Text version](./resume-en.md)
+
+The website links become available after GitHub Pages is enabled.
 
 ## Preview and edit
 
@@ -30,6 +32,8 @@ When Pages is available for the repository's current visibility and plan, choose
 - Supporting evidence: the owner's local project summaries, used to clarify evaluation populations, failure types, individual contributions, and measurement scope.
 - Writing guidance: `토스_AI직무_이력서_작성가이드_체크리스트.md`, supplied by the owner. Projects describe the problem and constraints, direct responsibilities, technical choices, validation, and outcomes. Requirements for unrelated roles were not treated as mandatory experience.
 - Visual reference: [Kwangho Lee's CV](https://khlee369.github.io/CV/). The green accent, restrained typography, language navigation, and main-column / sidebar structure informed an independently implemented design. No biography, photograph, logos, or source code were copied.
+
+- Profile photograph: supplied and approved by the owner for this CV.
 
 ### Consistency decisions
 

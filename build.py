@@ -14,6 +14,15 @@ def e(value):
     return escape(value, quote=True)
 
 
+def icon(name):
+    paths = {
+        "mail": '<rect x="2" y="2" width="20" height="20" rx="4"/><rect x="6" y="7" width="12" height="10" rx="1" fill="white"/><path d="m6 8 6 5 6-5" fill="none" stroke="currentColor" stroke-width="1.5"/>',
+        "phone": '<rect x="2" y="2" width="20" height="20" rx="4"/><path d="m8 5 3 4-2 2a12 12 0 0 0 4 4l2-2 4 3-1 3C11 20 4 13 5 6z" fill="white"/>',
+        "web": '<path d="M12 1a11 11 0 0 0-3.48 21.44c.55.1.75-.24.75-.53v-2.05c-3.06.66-3.71-1.3-3.71-1.3-.5-1.27-1.22-1.61-1.22-1.61-1-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.19 3.2.91.1-.71.39-1.19.7-1.46-2.45-.28-5.03-1.22-5.03-5.44 0-1.2.43-2.18 1.13-2.94-.11-.28-.49-1.4.11-2.91 0 0 .92-.29 3.02 1.13a10.5 10.5 0 0 1 5.5 0c2.1-1.42 3.02-1.13 3.02-1.13.6 1.51.22 2.63.11 2.91.7.76 1.13 1.74 1.13 2.94 0 4.23-2.58 5.16-5.04 5.44.4.34.75 1.01.75 2.04v3.05c0 .29.2.64.76.53A11 11 0 0 0 12 1z"/>',
+        "pin": '<path fill-rule="evenodd" d="M12 1a8 8 0 0 0-8 8c0 5.4 8 14 8 14s8-8.6 8-14a8 8 0 0 0-8-8m0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6"/>'
+    }
+    return f'<svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">{paths[name]}</svg>'
+
 def heading(key, labels):
     return f'<h2 id="{key}-heading">{e(labels[key])}</h2>'
 
@@ -60,7 +69,7 @@ def page(lang, content):
   <link rel="alternate" hreflang="en" href="./en.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23477560'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='38' fill='white'%3ES%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="./PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=8">
+  <link rel="stylesheet" href="./styles.css?v=9">
   <script src="./print.js" defer></script>
 </head>
 <body id="top">
@@ -69,18 +78,18 @@ def page(lang, content):
     <header class="header">
       <div class="identity">
         <nav class="language-switch" aria-label="Language / 언어">
-          <a href="./index.html" lang="ko" hreflang="ko"{ko_current}>한국어</a>
-          <a href="./en.html" lang="en" hreflang="en"{en_current}>English</a>
+          <a href="./index.html" lang="ko" hreflang="ko"{ko_current}><span aria-hidden="true">🇰🇷</span>KOR<span class="sr-only"> 한국어</span></a>
+          <a href="./en.html" lang="en" hreflang="en"{en_current}><span aria-hidden="true">🇺🇸</span>ENG<span class="sr-only"> English</span></a>
         </nav>
         <h1>{e(content['name'])}</h1>
         <p class="alternate-name">{e(content['alternateName'])}</p>
         <p class="role">{e(content['role'])}</p>
       </div>
       <address aria-label="{e(content['contactLabel'])}">
-        <a href="mailto:seungminshin00@gmail.com"><span>seungminshin00@gmail.com</span></a>
-        <a href="tel:+821045220340"><span>+82 10 4522 0340</span></a>
-        <a href="https://github.com/seummin"><span>github.com/seummin</span></a>
-        <span class="location"><span>{e(content['location'])}</span></span>
+        <a href="mailto:seungminshin00@gmail.com">{icon("mail")}<span>seungminshin00@gmail.com</span></a>
+        <a href="tel:+821045220340">{icon("phone")}<span>+82 10 4522 0340</span></a>
+        <a href="https://github.com/seummin">{icon("web")}<span>github.com/seummin</span></a>
+        <span class="location">{icon("pin")}<span>{e(content['location'])}</span></span>
       </address>
     </header>
     <div class="intro">

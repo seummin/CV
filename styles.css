@@ -71,6 +71,7 @@ html:lang(ko) h1 { letter-spacing: .025em; }
 .role { font-size: 1.25rem; font-weight: 400; margin-top: var(--space-xs); line-height: 1.4; }
 address { border-left: 1px solid var(--line); padding-left: 20px; font-size: var(--text-small); line-height: 1.6; font-style: normal; }
 address a, address .location { display: flex; align-items: center; gap: 10px; padding-block: 4px; }
+.contact-icon { width: 16px; height: 16px; flex: 0 0 16px; fill: currentColor; }
 address a { color: var(--muted); }
 address a span { text-decoration: underline; text-underline-offset: 3px; }
 .intro { display: grid; grid-template-columns: 128px minmax(0,1fr); align-items: center; gap: var(--space-lg); padding: var(--space-lg) 0; border-bottom: 1px solid var(--line); }

@@ -98,7 +98,10 @@ h3 { color: var(--heading); font-size: 1.1875rem; font-weight: 700; }
 .entry-subtitle { color: var(--muted); font-size: var(--text-small); margin: .375rem 0 .625rem; line-height: 1.5; }
 .entry-summary { font-size: var(--text-base); max-inline-size: var(--measure); margin-bottom: .625rem; line-height: var(--body-leading); }
 .entry-bullets { max-inline-size: var(--measure); padding-left: 22px; font-size: var(--text-base); line-height: var(--body-leading); }
-#teaching .entry-bullets { margin-top: .625rem; }
+@media screen {
+  #teaching h3 { font-size: 1.0625rem; line-height: 1.5; font-weight: 700; }
+  #teaching .entry-bullets { margin-top: .5rem; font-size: var(--text-small); line-height: 1.6; font-weight: 400; }
+}
 .entry-bullets li { padding-left: 2px; margin: .375rem 0; }
 .entry-bullets li::marker { color: #6f8275; font-size: .75em; }
 .tags { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin-top: var(--space-sm); }

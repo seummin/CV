@@ -55,7 +55,7 @@ def page(lang, content):
     skills = "".join(f'<div class="skill"><h3>{e(item["title"])}</h3><p>{e(item["text"])}</p></div>' for item in content["skills"])
     interests = "".join(f'<li>{e(item)}</li>' for item in content["interests"])
     nav = "".join(f'<a href="#{key}">{e(labels[key])}</a>' for key in ("experience", "projects", "research", "publications"))
-    teaching = "".join(f'<article class="entry"><h3>{e(item["title"])}</h3><ul class="entry-bullets">{"".join(f"<li>{e(bullet)}</li>" for bullet in item["bullets"])}</ul></article>' for item in content['teaching'])
+    teaching = "<ul class=\"teaching-list\">" + "".join(f'<li><span>{e(item["title"])}</span><span class="date">{e(item["date"])}</span></li>' for item in content["teaching"]) + "</ul>"
     ko_current = ' aria-current="page"' if lang == "ko" else ''
     en_current = ' aria-current="page"' if lang == "en" else ''
     return f'''<!doctype html>
@@ -70,7 +70,7 @@ def page(lang, content):
   <link rel="alternate" hreflang="en" href="./en.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23477560'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='38' fill='white'%3ES%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="./PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=11">
+  <link rel="stylesheet" href="./styles.css?v=12">
   <script src="./print.js" defer></script>
 </head>
 <body id="top">
@@ -152,9 +152,8 @@ def markdown(content, lang):
     lines.extend([f'## {labels["awards"]}', '', content['awardTitle'], '', content['awardDetail'], '', content['awardNote'], ''])
     lines.extend([f'## {labels["teaching"]}', ''])
     for item in content['teaching']:
-        lines.extend([f'### {item["title"]}', ''])
-        lines.extend(f'- {bullet}' for bullet in item['bullets'])
-        lines.append('')
+        lines.append(f'- {item["title"]} · {item["date"]}')
+    lines.append('')
     lines.extend([f'## {labels["education"]}', ''])
     for item in content["education"]:
         lines.extend([f'### {item["title"]}', '', f'{item["degree"]} | {item["date"]}', ''])

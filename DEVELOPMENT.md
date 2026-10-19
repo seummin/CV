@@ -44,7 +44,7 @@ When Pages is available for the repository's current visibility and plan, choose
 - ORAK: leaderboard positions and the Track 2 overall award are team results. Direct contribution is limited to the **Pokémon Red agent**.
 - The search-agent paper is **under review**, not accepted. The publication title and AAAI 2027 under-review status were updated from the owner’s explicit correction on 2026-10-19; project periods follow `main_1.tex`. Conflicting correlation coefficients and certified-accuracy figures in other local drafts were omitted. The alternate title in `cv-reference-en.tex` was not silently substituted.
 - Duplicate ORAK material under the original CV's Teaching section was consolidated under projects and awards; no teaching experience was inferred.
-- Teaching and training experience comes from the owner’s screenshot supplied on 2026-10-19. Listed directly below awards, without dates. New-hire and experienced-hire AI onboarding TA assignments are grouped; training attendance, outcomes and additional responsibilities are not inferred.
+- Teaching and training experience comes from the owner’s screenshot supplied on 2026-10-19. Listed directly below awards as a flat list with dates transcribed from the owner’s screenshot. New-hire and experienced-hire AI onboarding TA assignments are separate; training attendance, outcomes and additional responsibilities are not inferred.
 - No unverified revenue, online lift, user adoption, team size, or production traffic figures were added.
 
 Last content update: October 2026.

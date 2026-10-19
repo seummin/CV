@@ -293,25 +293,32 @@
     "awardNote": "Track 1·2 리더보드 모두 1위 · 팀 수상, 2026",
     "teaching": [
       {
-        "title": "롯데이노베이트 · 기업 교육",
-        "bullets": [
-          "롯데 그룹사 임원 대상 AI 활용 교육",
-          "롯데 그룹사 신입·경력사원 입문 교육의 AI 과정 조교(TA)",
-          "롯데이노베이트 신입사원 대상 업무 자동화 교육"
-        ]
+        "title": "롯데 그룹사 임원 대상 AI 활용 교육",
+        "date": "2026.08"
       },
       {
-        "title": "조선대학교 · 외부 강의",
-        "bullets": [
-          "AI 활용 강의"
-        ]
+        "title": "롯데 그룹사 신입사원 AI 입문 교육 TA",
+        "date": "2025.09 / 2026.04 / 2026.06 / 2026.10"
       },
       {
-        "title": "대학원 · 수업 조교",
-        "bullets": [
-          "「자연어처리 이론 및 응용」 수업 조교",
-          "「인공지능개론」 수업 조교"
-        ]
+        "title": "롯데 그룹사 경력사원 AI 입문 교육 TA",
+        "date": "2025.12 / 2026.04"
+      },
+      {
+        "title": "롯데이노베이트 신입사원 대상 업무 자동화 교육",
+        "date": "2026.06"
+      },
+      {
+        "title": "조선대학교 AI 활용 강의",
+        "date": "2025.12"
+      },
+      {
+        "title": "「자연어처리 이론 및 응용」 수업 조교",
+        "date": "2024.03 – 2024.06"
+      },
+      {
+        "title": "「인공지능개론」 수업 조교",
+        "date": "2017.03 – 2023.02"
       }
     ]
   },
@@ -609,25 +616,32 @@
     "awardNote": "1st on both Track 1 & 2 leaderboards · Team award, 2026",
     "teaching": [
       {
-        "title": "LOTTE INNOVATE · Corporate Training",
-        "bullets": [
-          "AI application training for executives at LOTTE Group companies",
-          "Teaching assistant for AI sessions in onboarding programs for new hires and experienced hires at LOTTE Group companies",
-          "Workflow automation training for new employees at LOTTE INNOVATE"
-        ]
+        "title": "AI application training for LOTTE Group executives",
+        "date": "Aug 2026"
       },
       {
-        "title": "Chosun University · Guest Lecture",
-        "bullets": [
-          "Lecture on AI applications"
-        ]
+        "title": "TA, AI onboarding for new hires at LOTTE Group companies",
+        "date": "Sep 2025 / Apr 2026 / Jun 2026 / Oct 2026"
       },
       {
-        "title": "Graduate Studies · Teaching Assistantships",
-        "bullets": [
-          "Teaching assistant, Natural Language Processing: Theory and Applications",
-          "Teaching assistant, Introduction to Artificial Intelligence"
-        ]
+        "title": "TA, AI onboarding for experienced hires at LOTTE Group companies",
+        "date": "Dec 2025 / Apr 2026"
+      },
+      {
+        "title": "Workflow automation training for new employees at LOTTE INNOVATE",
+        "date": "Jun 2026"
+      },
+      {
+        "title": "Lecture on AI applications, Chosun University",
+        "date": "Dec 2025"
+      },
+      {
+        "title": "Teaching assistant, Natural Language Processing: Theory and Applications",
+        "date": "Mar – Jun 2024"
+      },
+      {
+        "title": "Teaching assistant, Introduction to Artificial Intelligence",
+        "date": "Mar 2017 – Feb 2023"
       }
     ]
   }

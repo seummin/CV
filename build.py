@@ -49,11 +49,9 @@ def page(lang, content):
     blocks = "".join(f'<section class="section" id="{key}" aria-labelledby="{key}-heading">{heading(key, labels)}{"".join(entry(item) for item in content[key])}</section>' for key in ("experience", "projects", "research"))
     pubs = []
     for item in content["publications"]:
-        badge = item["venue"]
-        if item["status"].casefold() not in ("published", "게재"):
-            badge += f' · {item["status"]}'
+        review = '<span class="review-status">under review</span>' if item["status"].casefold() == 'under review' else ''
         paper = f'<a class="paper-link" href="{e(item["url"])}">[Paper]</a>' if item.get("url") else ''
-        pubs.append(f'<li class="publication"><span class="publication-venue">{e(badge)}</span><h3>{e(item["title"])}</h3><p class="publication-authors">{item["authors"]}</p>{paper}</li>')
+        pubs.append(f'<li class="publication"><span class="publication-venue">{e(item["venue"])}</span><h3>{e(item["title"])}</h3><p class="publication-authors">{item["authors"]}{review}</p>{paper}</li>')
     schools = "".join(f'<article class="school"><h3>{e(item["title"])}</h3><p>{e(item["degree"])}</p><p class="date">{e(item["date"])}</p>{"".join(f"<p>{detail}</p>" for detail in item["details"])}</article>' for item in content["education"])
     skills = "".join(f'<div class="skill"><h3>{e(item["title"])}</h3><p>{e(item["text"])}</p></div>' for item in content["skills"])
     interests = "".join(f'<li>{e(item)}</li>' for item in content["interests"])
@@ -73,7 +71,7 @@ def page(lang, content):
   <link rel="alternate" hreflang="en" href="./en.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23477560'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='38' fill='white'%3ES%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="./PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=15">
+  <link rel="stylesheet" href="./styles.css?v=17">
   <script src="./print.js" defer></script>
 </head>
 <body id="top">
@@ -151,7 +149,8 @@ def markdown(content, lang):
     lines.extend([f'## {labels["publications"]}', ''])
     for item in content["publications"]:
         title = f'[{item["title"]}]({item["url"]})' if item.get('url') else item['title']
-        lines.extend([f'- {title}', f'  {plain(item["authors"])}. {item["venue"]}. {item["status"]}.', ''])
+        status = f' {item["status"]}.' if item["status"] else ''
+        lines.extend([f'- {title}', f'  {plain(item["authors"])}. {item["venue"]}.{status}', ''])
     lines.extend([f'## {labels["awards"]}', '', content['awardTitle'], '', content['awardDetail'], '', content['awardNote'], ''])
     lines.extend([f'## {labels["teaching"]}', ''])
     for item in content['teaching']:

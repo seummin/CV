@@ -225,20 +225,20 @@
       {
         "title": "Diagnosing Premature Downstream Expansion in Multi-Hop Search Agents via Requirement Closure",
         "authors": "<strong>Seungmin Shin</strong> et al.",
-        "venue": "2027 AAAI",
+        "venue": "AAAI 2027",
         "status": "Under Review"
       },
       {
         "title": "Acronym Meaning Selection for Improving Ambiguous Query Answering with User Profile Memory",
         "authors": "<strong>Seungmin Shin</strong> et al.",
-        "venue": "IEIE Summer Conference · 2026",
-        "status": "발표"
+        "venue": "IEIE 2026 Summer Conference",
+        "status": ""
       },
       {
         "title": "Unified Inference and Confidence Calibration Method Using Large Language Models",
         "authors": "<strong>Seungmin Shin</strong> et al.",
-        "venue": "HCLT-KACL · 2025",
-        "status": "발표"
+        "venue": "HCLT-KACL 2025",
+        "status": ""
       }
     ],
     "education": [
@@ -548,20 +548,20 @@
       {
         "title": "Diagnosing Premature Downstream Expansion in Multi-Hop Search Agents via Requirement Closure",
         "authors": "<strong>Seungmin Shin</strong> et al.",
-        "venue": "2027 AAAI",
+        "venue": "AAAI 2027",
         "status": "Under Review"
       },
       {
         "title": "Acronym Meaning Selection for Improving Ambiguous Query Answering with User Profile Memory",
         "authors": "<strong>Seungmin Shin</strong> et al.",
-        "venue": "IEIE Summer Conference · 2026",
-        "status": "Presented"
+        "venue": "IEIE 2026 Summer Conference",
+        "status": ""
       },
       {
         "title": "Unified Inference and Confidence Calibration Method Using Large Language Models",
         "authors": "<strong>Seungmin Shin</strong> et al.",
-        "venue": "HCLT-KACL · 2025",
-        "status": "Presented"
+        "venue": "HCLT-KACL 2025",
+        "status": ""
       }
     ],
     "education": [

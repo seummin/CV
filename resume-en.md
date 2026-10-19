@@ -133,8 +133,8 @@ BERT / WordNet / Interactive Evaluation
 - [ECO Decoding: Entropy-Based Control for Controllability and Fluency in Controllable Dialogue Generation](https://arxiv.org/abs/2511.01568)
   Seungmin Shin, Dooyoung Kim, Youngjoong Ko. EMNLP 2025 · Main Conference. Published.
 
-- Do Search Agents Verify Before They Search? A Requirement-Aware Framework for Trajectory Evaluation
-  Seungmin Shin et al.. 2026 · Manuscript under review. Under review.
+- Diagnosing Premature Downstream Expansion in Multi-Hop Search Agents via Requirement Closure
+  Seungmin Shin et al.. 2027 AAAI. Under Review.
 
 - Acronym Meaning Selection for Improving Ambiguous Query Answering with User Profile Memory
   Seungmin Shin et al.. IEIE Summer Conference · 2026. Presented.

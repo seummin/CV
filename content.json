@@ -273,7 +273,7 @@
       },
       {
         "title": "Agents & Evaluation",
-        "text": "Tool Calling, MCP, Smolagents, Graph Search, 벤치마크 설계, LLM-as-a-Judge"
+        "text": "Agent Orchestration, Agentic Search, Agentic Memory, Memory Augmented Generation, Tool Calling, MCP, Smolagents, Benchmark Design, LLM-as-a-Judge, Evaluation Framework"
       },
       {
         "title": "Serving & Data",
@@ -589,7 +589,7 @@
       },
       {
         "title": "Agents & Evaluation",
-        "text": "Tool Calling, MCP, Smolagents, Graph Search, Benchmark Design, LLM-as-a-Judge"
+        "text": "Agent Orchestration, Agentic Search, Agentic Memory, Memory Augmented Generation, Tool Calling, MCP, Smolagents, Benchmark Design, LLM-as-a-Judge, Evaluation Framework"
       },
       {
         "title": "Serving & Data",

@@ -188,7 +188,7 @@ Track 1·2 리더보드 모두 1위 · 팀 수상, 2026
 
 - Programming: Python
 - Modeling: PyTorch, Hugging Face Transformers, PEFT / LoRA
-- Agents & Evaluation: Tool Calling, MCP, Smolagents, Graph Search, 벤치마크 설계, LLM-as-a-Judge
+- Agents & Evaluation: Agent Orchestration, Agentic Search, Agentic Memory, Memory Augmented Generation, Tool Calling, MCP, Smolagents, Benchmark Design, LLM-as-a-Judge, Evaluation Framework
 - Serving & Data: vLLM, FastAPI, Structured Output, DB·캐시 연동, 비동기 처리, pytest
 
 ## 연구 관심 분야

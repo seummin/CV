@@ -188,7 +188,7 @@ B.S. in Computer Science and Engineering | Mar 2017 – Feb 2023
 
 - Programming: Python
 - Modeling: PyTorch, Hugging Face Transformers, PEFT / LoRA
-- Agents & Evaluation: Tool Calling, MCP, Smolagents, Graph Search, Benchmark Design, LLM-as-a-Judge
+- Agents & Evaluation: Agent Orchestration, Agentic Search, Agentic Memory, Memory Augmented Generation, Tool Calling, MCP, Smolagents, Benchmark Design, LLM-as-a-Judge, Evaluation Framework
 - Serving & Data: vLLM, FastAPI, Structured Output, Database / Cache Integration, Async Processing, pytest
 
 ## Research Interests

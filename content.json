@@ -21,7 +21,8 @@
       "education": "학력",
       "skills": "기술",
       "interests": "연구 관심 분야",
-      "awards": "수상"
+      "awards": "수상",
+      "teaching": "교육·강의 및 조교 경험"
     },
     "experience": [
       {
@@ -289,7 +290,30 @@
     ],
     "awardTitle": "ORAK Game Agent Challenge",
     "awardDetail": "Track 2 종합 1위",
-    "awardNote": "Track 1·2 리더보드 모두 1위 · 팀 수상, 2026"
+    "awardNote": "Track 1·2 리더보드 모두 1위 · 팀 수상, 2026",
+    "teaching": [
+      {
+        "title": "롯데이노베이트 · 기업 교육",
+        "bullets": [
+          "롯데 그룹사 임원 대상 AI 활용 교육",
+          "롯데 그룹사 신입·경력사원 입문 교육의 AI 과정 조교(TA)",
+          "롯데이노베이트 신입사원 대상 업무 자동화 교육"
+        ]
+      },
+      {
+        "title": "조선대학교 · 외부 강의",
+        "bullets": [
+          "AI 활용 강의"
+        ]
+      },
+      {
+        "title": "대학원 · 수업 조교",
+        "bullets": [
+          "「자연어처리 이론 및 응용」 수업 조교",
+          "「인공지능개론」 수업 조교"
+        ]
+      }
+    ]
   },
   "en": {
     "name": "SEUNGMIN SHIN",
@@ -313,7 +337,8 @@
       "education": "Education",
       "skills": "Technical Skills",
       "interests": "Research Interests",
-      "awards": "Awards"
+      "awards": "Awards",
+      "teaching": "Teaching & Training"
     },
     "experience": [
       {
@@ -581,6 +606,29 @@
     ],
     "awardTitle": "ORAK Game Agent Challenge",
     "awardDetail": "1st place overall · Track 2",
-    "awardNote": "1st on both Track 1 & 2 leaderboards · Team award, 2026"
+    "awardNote": "1st on both Track 1 & 2 leaderboards · Team award, 2026",
+    "teaching": [
+      {
+        "title": "LOTTE INNOVATE · Corporate Training",
+        "bullets": [
+          "AI application training for executives at LOTTE Group companies",
+          "Teaching assistant for AI sessions in onboarding programs for new hires and experienced hires at LOTTE Group companies",
+          "Workflow automation training for new employees at LOTTE INNOVATE"
+        ]
+      },
+      {
+        "title": "Chosun University · Guest Lecture",
+        "bullets": [
+          "Lecture on AI applications"
+        ]
+      },
+      {
+        "title": "Graduate Studies · Teaching Assistantships",
+        "bullets": [
+          "Teaching assistant, Natural Language Processing: Theory and Applications",
+          "Teaching assistant, Introduction to Artificial Intelligence"
+        ]
+      }
+    ]
   }
 }

@@ -150,6 +150,23 @@ ORAK Game Agent Challenge
 
 1st on both Track 1 & 2 leaderboards · Team award, 2026
 
+## Teaching & Training
+
+### LOTTE INNOVATE · Corporate Training
+
+- AI application training for executives at LOTTE Group companies
+- Teaching assistant for AI sessions in onboarding programs for new hires and experienced hires at LOTTE Group companies
+- Workflow automation training for new employees at LOTTE INNOVATE
+
+### Chosun University · Guest Lecture
+
+- Lecture on AI applications
+
+### Graduate Studies · Teaching Assistantships
+
+- Teaching assistant, Natural Language Processing: Theory and Applications
+- Teaching assistant, Introduction to Artificial Intelligence
+
 ## Education
 
 ### Sungkyunkwan University

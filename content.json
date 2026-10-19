@@ -14,7 +14,7 @@
     "navLabel": "이력서 목차",
     "intro": "LLM과 AI Agent를 개발하는 AI Engineer입니다. <strong>사용자 메모리·Agent 도구·보안관제 LLM의 문제 정의와 평가부터 API 구현·추론 서빙까지 담당합니다.</strong> 롯데이노베이트 AI Tech Lab에 재직 중이며, 성균관대학교 인공지능 석사로 제어 가능한 대화 생성 연구를 EMNLP 2025 Main Conference에 제1저자로 발표했습니다.",
     "sections": {
-      "experience": "경력",
+      "experience": "경험",
       "projects": "주요 프로젝트",
       "research": "연구 경험",
       "publications": "논문",
@@ -337,7 +337,7 @@
     "navLabel": "CV sections",
     "intro": "AI Engineer building LLM and AI Agent systems. <strong>I work across problem definition, evaluation, API development, and inference serving for user memory, agent tools, and security LLMs.</strong> At LOTTE INNOVATE AI Tech Lab, I connect research with implementation. I hold an M.S. in AI from Sungkyunkwan University and published first-author research on controllable dialogue generation at EMNLP 2025 Main Conference.",
     "sections": {
-      "experience": "Work Experience",
+      "experience": "Experience",
       "projects": "Selected Projects",
       "research": "Research Experience",
       "publications": "Publications",

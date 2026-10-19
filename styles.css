@@ -91,6 +91,10 @@ html:lang(ko) h2 { letter-spacing: .015em; }
 h3 { color: var(--heading); font-size: 1.1875rem; font-weight: 700; }
 .entry { margin-bottom: var(--space-lg); }
 .entry:last-child { margin-bottom: 0; }
+/* Experience timeline: the rail spans the spacing between entries. */
+#experience .entry { position: relative; margin: 0 0 0 8px; padding: 0 0 var(--space-lg) 28px; border-left: 2px solid var(--line); }
+#experience .entry:last-child { padding-bottom: 0; }
+#experience .entry::before { position: absolute; top: .4rem; left: -8px; width: 14px; height: 14px; border-radius: 50%; background: var(--display-accent); content: ""; }
 .entry-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--space-xs) 1rem; }
 .entry-heading h3 { display: block; font-size: 1.1875rem; letter-spacing: 0; min-width: 0; flex: 1 1 20rem; }
 .date { color: var(--muted); font-size: var(--text-small); font-variant-numeric: tabular-nums; }
@@ -174,6 +178,7 @@ footer a { display: inline-flex; align-items: center; min-height: 44px; text-dec
   .section-nav { gap: 0 16px; margin-bottom: var(--space-sm); }
   h2 { font-size: 1.5rem; }
   .entry-heading { display: block; }
+  #experience .entry { padding-left: 20px; }
   .entry-heading h3 { font-size: 1.125rem; }
   .entry-heading .date { padding-left: 0; margin-top: var(--space-xs); }
   .entry-subtitle { margin-top: .375rem; }
@@ -204,6 +209,8 @@ footer a { display: inline-flex; align-items: center; min-height: 44px; text-dec
   .section { margin-bottom: 23px; }
   h2 { font-size: 12pt; margin-bottom: 14px; break-after: avoid; }
   .entry { margin-bottom: 20px; }
+  #experience .entry { margin: 0 0 20px; padding: 0; border: 0; }
+  #experience .entry::before { display: none; }
   .entry + .entry { border: 0; padding-top: 0; }
   .entry-heading { display: flex; flex-direction: row; align-items: center; }
   .entry-heading h3 { font-size: 10pt; }

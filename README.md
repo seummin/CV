@@ -12,7 +12,7 @@ seungminshin00@gmail.com · +82 10 4522 0340 · https://github.com/seummin
 
 LLM과 AI Agent를 개발하는 AI Engineer입니다. 사용자 메모리·Agent 도구·보안관제 LLM의 문제 정의와 평가부터 API 구현·추론 서빙까지 담당합니다. 롯데이노베이트 AI Tech Lab에 재직 중이며, 성균관대학교 인공지능 석사로 제어 가능한 대화 생성 연구를 EMNLP 2025 Main Conference에 제1저자로 발표했습니다.
 
-## 경력
+## 경험
 
 ### 롯데이노베이트 | 2025.02 – 현재
 

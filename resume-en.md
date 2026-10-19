@@ -12,7 +12,7 @@ seungminshin00@gmail.com · +82 10 4522 0340 · https://github.com/seummin
 
 AI Engineer building LLM and AI Agent systems. I work across problem definition, evaluation, API development, and inference serving for user memory, agent tools, and security LLMs. At LOTTE INNOVATE AI Tech Lab, I connect research with implementation. I hold an M.S. in AI from Sungkyunkwan University and published first-author research on controllable dialogue generation at EMNLP 2025 Main Conference.
 
-## Work Experience
+## Experience
 
 ### LOTTE INNOVATE | Feb 2025 – Present
 

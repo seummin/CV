@@ -59,3 +59,7 @@ Guidance: [Typography skill by petekp](https://github.com/petekp/agent-skills/bl
 - Entry spacing is 32px, section spacing 48px, and bullet margins 6px. Titles, dates and role metadata form one visual group. Result strips use 22px values and 12px vertical padding.
 - Editorial review: shorten the opening profile to specialization, scope and one academic credential. Keep project problem statements, individual responsibilities, alternatives, evaluation populations and measured outcomes explicit. Do not replace evidence with unsupported summary claims.
 - Maintain text-only section navigation, language flags and header contact icons, visible keyboard focus, contrast, 200% text support and awards below publications.
+
+## Experience timeline
+
+The Experience section uses a green dot and a continuous vertical rail for each role. The rail is CSS-only and decorative; headings and dates remain normal text for screen readers. Print styling removes the rail to conserve page width. The Korean and English section labels are 경험 and Experience.

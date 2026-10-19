@@ -22,7 +22,7 @@
       "skills": "기술",
       "interests": "연구 관심 분야",
       "awards": "수상",
-      "teaching": "Education"
+      "teaching": "강의·교육"
     },
     "experience": [
       {
@@ -298,11 +298,11 @@
       },
       {
         "title": "롯데 그룹사 신입사원 AI 입문 교육 TA",
-        "date": "2025.09 / 2026.04 / 2026.06 / 2026.10"
+        "date": "2025.09 · 2026.04·06·10 (4회)"
       },
       {
         "title": "롯데 그룹사 경력사원 AI 입문 교육 TA",
-        "date": "2025.12 / 2026.04"
+        "date": "2025.12 · 2026.04 (2회)"
       },
       {
         "title": "롯데이노베이트 신입사원 대상 업무 자동화 교육",
@@ -345,7 +345,7 @@
       "skills": "Technical Skills",
       "interests": "Research Interests",
       "awards": "Awards",
-      "teaching": "Education"
+      "teaching": "Teaching"
     },
     "experience": [
       {
@@ -621,11 +621,11 @@
       },
       {
         "title": "TA, AI onboarding for new hires at LOTTE Group companies",
-        "date": "Sep 2025 / Apr 2026 / Jun 2026 / Oct 2026"
+        "date": "Sep 2025 · Apr, Jun, Oct 2026 (4 sessions)"
       },
       {
         "title": "TA, AI onboarding for experienced hires at LOTTE Group companies",
-        "date": "Dec 2025 / Apr 2026"
+        "date": "Dec 2025 · Apr 2026 (2 sessions)"
       },
       {
         "title": "Workflow automation training for new employees at LOTTE INNOVATE",

@@ -150,11 +150,11 @@ ORAK Game Agent Challenge
 
 1st on both Track 1 & 2 leaderboards · Team award, 2026
 
-## Education
+## Teaching
 
 - AI application training for LOTTE Group executives · Aug 2026
-- TA, AI onboarding for new hires at LOTTE Group companies · Sep 2025 / Apr 2026 / Jun 2026 / Oct 2026
-- TA, AI onboarding for experienced hires at LOTTE Group companies · Dec 2025 / Apr 2026
+- TA, AI onboarding for new hires at LOTTE Group companies · Sep 2025 · Apr, Jun, Oct 2026 (4 sessions)
+- TA, AI onboarding for experienced hires at LOTTE Group companies · Dec 2025 · Apr 2026 (2 sessions)
 - Workflow automation training for new employees at LOTTE INNOVATE · Jun 2026
 - Lecture on AI applications, Chosun University · Dec 2025
 - Teaching assistant, Natural Language Processing: Theory and Applications · Mar – Jun 2024

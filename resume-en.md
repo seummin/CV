@@ -150,7 +150,7 @@ ORAK Game Agent Challenge
 
 1st on both Track 1 & 2 leaderboards · Team award, 2026
 
-## Teaching & Training
+## Education
 
 ### LOTTE INNOVATE · Corporate Training
 

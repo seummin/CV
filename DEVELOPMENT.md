@@ -63,3 +63,7 @@ Guidance: [Typography skill by petekp](https://github.com/petekp/agent-skills/bl
 ## Experience timeline
 
 The Experience section uses a green dot and a continuous vertical rail for each role. The rail is CSS-only and decorative; headings and dates remain normal text for screen readers. Print styling removes the rail to conserve page width. The Korean and English section labels are 경험 and Experience.
+
+## Publication layout
+
+Publication entries present the venue and status badge, title, authors, then a [Paper] link when the source record includes a URL. The title remains plain text so entries without a public paper link do not appear clickable. Under-review status is included in the badge to avoid implying acceptance.

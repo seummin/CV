@@ -119,11 +119,14 @@ h3 { color: var(--heading); font-size: 1.1875rem; font-weight: 700; }
 .project-results strong { color: var(--accent); font-size: 1.375rem; font-weight: 700; line-height: 1.25; font-variant-numeric: tabular-nums; }
 .project-results span { color: #536358; font-size: var(--text-small); margin-top: var(--space-xs); }
 .publication-list { list-style: none; padding: 0; }
-.publication { margin-bottom: var(--space-md); }
-.publication h3 { font-size: 1.0625rem; line-height: 1.5; max-inline-size: var(--measure); }
-.publication p { font-size: var(--text-small); margin-top: var(--space-xs); }
-.publication-venue { color: var(--muted); }
-.status { display: inline-block; border: 1px solid #cbd7ce; border-radius: 3px; padding: 1px 6px; font-size: .75rem; margin-left: .5rem; white-space: nowrap; }
+.publication { margin-bottom: var(--space-lg); }
+.publication:last-child { margin-bottom: 0; }
+.publication-venue { display: inline-block; max-width: 100%; padding: .35rem .7rem; border-radius: .55rem; background: var(--soft); color: var(--accent); font-size: var(--text-small); font-weight: 700; line-height: 1.4; }
+.publication h3 { max-inline-size: var(--measure); margin-top: .65rem; font-size: 1.25rem; line-height: 1.4; }
+.publication-authors { margin-top: .45rem; color: var(--muted); font-size: .9375rem; line-height: 1.5; }
+.publication-authors strong { color: var(--heading); }
+.paper-link { display: inline-block; margin-top: .55rem; font-size: .9375rem; font-weight: 650; text-decoration: none; }
+.paper-link:hover { text-decoration: underline; }
 .sidebar h2 { font-size: 1.25rem; margin-bottom: var(--space-md); letter-spacing: .04em; }
 html:lang(ko) .sidebar h2 { letter-spacing: 0; }
 .sidebar h3 { font-size: 1rem; margin-bottom: var(--space-xs); }
@@ -227,9 +230,9 @@ footer a { display: inline-flex; align-items: center; min-height: 44px; text-dec
   .entry-links { font-size: 8pt; }
   a { color: inherit; text-decoration: none; }
   .publication { margin-bottom: 14px; }
+  .publication-venue { padding: 1px 5px; border: 1px solid #ddd; background: none; font-size: 7pt; }
   .publication h3 { font-size: 9pt; }
-  .publication p { font-size: 8pt; margin-top: 3px; }
-  .status { font-size: 7pt; }
+  .publication-authors, .paper-link { font-size: 8pt; margin-top: 3px; }
   .sidebar { border-left: 0; border-top: 1px solid #ddd; padding: 18px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 30px; }
   .sidebar .section { break-inside: avoid; }
   .sidebar h2 { font-size: 11pt; margin-bottom: 14px; }

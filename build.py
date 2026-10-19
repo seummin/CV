@@ -49,8 +49,11 @@ def page(lang, content):
     blocks = "".join(f'<section class="section" id="{key}" aria-labelledby="{key}-heading">{heading(key, labels)}{"".join(entry(item) for item in content[key])}</section>' for key in ("experience", "projects", "research"))
     pubs = []
     for item in content["publications"]:
-        title = f'<a href="{e(item["url"])}">{e(item["title"])}</a>' if item.get("url") else e(item["title"])
-        pubs.append(f'<li class="publication"><h3>{title}</h3><p>{item["authors"]}</p><p class="publication-venue">{e(item["venue"])} <span class="status">{e(item["status"])}</span></p></li>')
+        badge = item["venue"]
+        if item["status"].casefold() not in ("published", "게재"):
+            badge += f' · {item["status"]}'
+        paper = f'<a class="paper-link" href="{e(item["url"])}">[Paper]</a>' if item.get("url") else ''
+        pubs.append(f'<li class="publication"><span class="publication-venue">{e(badge)}</span><h3>{e(item["title"])}</h3><p class="publication-authors">{item["authors"]}</p>{paper}</li>')
     schools = "".join(f'<article class="school"><h3>{e(item["title"])}</h3><p>{e(item["degree"])}</p><p class="date">{e(item["date"])}</p>{"".join(f"<p>{detail}</p>" for detail in item["details"])}</article>' for item in content["education"])
     skills = "".join(f'<div class="skill"><h3>{e(item["title"])}</h3><p>{e(item["text"])}</p></div>' for item in content["skills"])
     interests = "".join(f'<li>{e(item)}</li>' for item in content["interests"])
@@ -70,7 +73,7 @@ def page(lang, content):
   <link rel="alternate" hreflang="en" href="./en.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23477560'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='38' fill='white'%3ES%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="./PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=13">
+  <link rel="stylesheet" href="./styles.css?v=14">
   <script src="./print.js" defer></script>
 </head>
 <body id="top">

@@ -18,11 +18,11 @@ AI Engineer building LLM and AI Agent systems. I work across problem definition,
 
 AI Engineer · AI Tech Lab
 
-Develop context-aware LLM services and agent systems, covering data and task design, model evaluation and fine-tuning, API implementation, and integration with operational systems.
+Develop LLM-powered capabilities and AI agents for the group’s internal AI platform and client services. Analyze business requirements to define the problems to solve and the scope of service deployment.
 
-- Defined the problem and evaluation tasks for user profile memory; implemented extraction, storage, retrieval APIs, and asynchronous processing.
-- Unified attack classification, evidence extraction, and explanation for security monitoring; developed confidence scoring and vLLM / FastAPI inference services.
-- Built agent tools connecting financial and economic data and user/product databases, with input validation, clarification, and error recovery.
+- Design agent architectures for internal services and client PoCs. Implement MCP-based tools that connect databases and external APIs, along with personalization based on user information. Define agent roles and execution flows around task characteristics and the reasoning capabilities of the models.
+- Analyze research contributions and limitations, and validate their applicability in service environments. Adapt methods to limited data and operational constraints, connecting model training and evaluation with serving and operations to translate research into deployed services.
+- Design task-specific evaluation datasets, metrics, and comparative experiments to quantitatively validate AI services. Analyze errors missed by existing evaluations and failures during execution to improve evaluation methods and AI services.
 
 ### Sungkyunkwan University · NLP Lab | Mar 2023 – Feb 2025
 

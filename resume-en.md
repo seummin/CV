@@ -134,13 +134,13 @@ BERT / WordNet / Interactive Evaluation
   Seungmin Shin, Dooyoung Kim, Youngjoong Ko. EMNLP 2025 · Main Conference. Published.
 
 - Diagnosing Premature Downstream Expansion in Multi-Hop Search Agents via Requirement Closure
-  Seungmin Shin et al.. AAAI 2027. Under Review.
+  Seungmin Shin, Hyunmook Cha. AAAI 2027. Under Review.
 
 - Acronym Meaning Selection for Improving Ambiguous Query Answering with User Profile Memory
-  Seungmin Shin et al.. IEIE 2026 Summer Conference.
+  Seungmin Shin, Kwangryun Kim, Kihun Lee, Jiwon Jeong, Junghwan Kim, Junye Park, Wonchul Kim. IEIE 2026 Summer Conference.
 
 - Unified Inference and Confidence Calibration Method Using Large Language Models
-  Seungmin Shin et al.. HCLT-KACL 2025.
+  Seungmin Shin, Daegun Kim, Ungi Lee, Kwangryun Kim, Ilho Choi, Kihun Lee, Bongji Jeon. HCLT-KACL 2025.
 
 ## Awards
 

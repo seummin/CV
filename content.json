@@ -49,32 +49,28 @@
     ],
     "projects": [
       {
-        "title": "대화 기반 사용자 프로필 메모리",
-        "subtitle": "롯데이노베이트 · 문제 정의, 평가 설계, 메모리 API·비동기 처리 구현",
+        "title": "User Profile Memory · 대화 기반 개인화 메모리",
+        "subtitle": "롯데이노베이트 · 메모리 도입 제안·평가 설계·서비스 구현 및 운영",
         "date": "2025 – 2026",
-        "summary": "세션이 바뀌면 사라지는 사용자 맥락과 전체 대화 입력의 비용·지연 문제를 해결하기 위해, 장기간 재사용할 직무·관심·선호를 구조화된 프로필로 저장하고 응답에 주입하는 시스템을 개발했습니다.",
+        "summary": "세션이 달라져도 사용자 직무와 관심사를 응답에 활용할 수 있도록 사내 챗 서비스에 프로필 메모리를 설계·적용했습니다. 실제 대화로 개인화 효과를 평가하고, 대량 갱신 중 일부 작업이 실패해도 복구할 수 있도록 운영 구조를 개선했습니다.",
         "bullets": [
-          "실제 질의를 분석해 직무에 따라 의미가 달라지는 약어 해석을 평가 과제로 선정했습니다. 원천 사용자 50명 중 약어가 등장한 <strong>44명·326개 약어·454개 대화</strong>로 평가셋을 구성하고, 정답 노출과 중복 사례를 점검했습니다.",
-          "전체 히스토리와 사용자 발화만을 이용한 추출, system/user 메시지 주입을 비교했습니다. 동일 약어 평가셋에서 GPT-4.1-mini 정확도를 프로필 미사용 <strong>68.94% → 80.40% (+11.46%p)</strong>로 개선했습니다.",
-          "긴 갱신 작업을 job과 사용자·대화 청크별 task로 분리했습니다. 진행 상태 조회, 부분 성공, 실패 청크 재시도와 사용자별 쓰기 잠금을 구현하고, 백엔드와 갱신 후 캐시 재조회 흐름을 맞춰 오래된 프로필이 사용되는 문제를 해결했습니다.",
-          "별도 배치 성능 실험에서 병렬 처리로 평균 처리 시간을 <strong>33.31초 → 19.77초 (40.6% 단축)</strong>로 줄였습니다. 구조화 출력 테스트 698건의 실패를 JSON 오류 4건과 null 입력 27건으로 분리해 개선 대상을 구체화했습니다."
+          "대화 세션이 바뀌면 이전 대화에서 알게 된 사용자의 직무·관심사를 응답에 이어 쓰기 어려웠습니다. 매번 전체 대화를 입력하면 길이와 처리 시간이 늘어나므로, 반복 활용할 정보를 저장하는 <strong>프로필 메모리 도입을 제안</strong>했습니다.",
+          "사내 챗 서비스에 기존 메모리 구조를 적용하자 반복적인 LLM 호출로 갱신이 지연되고 활용되지 않는 정보가 쌓였습니다. 유용한 맥락을 보존하기 위해 <strong>무엇을 기억해야 응답이 개선되는지</strong>부터 평가하기로 했습니다.",
+          "실제 업무 대화에서 직무·관심사·기술 정보를 프로필로 구조화하고, 사용자에 따라 뜻이 달라지는 약어 해석을 개인화 평가 과제로 선정했습니다.",
+          "실제 로그로 구성한 평가 대화 454건에서 프로필 사용 여부를 비교한 결과, 약어 해석 정확도가 <strong>68.94%에서 80.40%로 개선</strong>됐습니다. 이 결과를 근거로 구조화된 프로필을 서비스에 적용했습니다.",
+          "갱신 요청이 시간 초과되면 완료 범위를 알 수 없어 전체를 재실행해야 했습니다. 사용자·대화 구간별 비동기 처리와 작업 상태 추적을 구현해 실패 구간만 재처리하고, 서빙 API 제한에 맞춰 동시 호출 수를 조절했습니다."
         ],
         "tags": [
           "Python",
-          "Structured Output",
           "FastAPI",
-          "Job / Worker",
-          "DB / Cache",
-          "HMAC"
+          "Structured Output",
+          "User Profile Memory",
+          "비동기 처리"
         ],
         "results": [
           {
             "value": "+11.46%p",
             "label": "약어 해석 정확도"
-          },
-          {
-            "value": "−40.6%",
-            "label": "평균 배치 처리 시간"
           }
         ]
       },
@@ -104,15 +100,18 @@
         ]
       },
       {
-        "title": "ORAK Game Agent · Pokémon Red",
-        "subtitle": "롯데이노베이트 · Pokémon Red 계획·관측 전처리·상태 메모리·행동 선택",
+        "title": "ORAK Game Agent Challenge · Pokémon Red Agent",
+        "subtitle": "롯데이노베이트 · Pokémon Red의 입력 전처리·진행 상태 관리·행동 결정 설계 및 구현",
         "date": "2026.02 – 2026.04",
-        "summary": "소형 LLM이 부분 관측 게임에서 좌표·이동·대화·전투를 한 번에 판단하며 실패를 반복하는 문제를 분석했습니다. 복합 추론을 현재 상태에 맞는 행동 후보 선택으로 바꾸는 Agent를 설계했습니다.",
+        "summary": "제한된 행동 횟수 안에 Pokémon Red의 진행 목표를 수행하는 게임 Agent를 개발했습니다. 환경 상태와 이동 후보는 코드로 정리하고, 모델이 현재 목표에 맞는 행동을 선택하도록 설계했습니다.",
         "bullets": [
-          "Playbook으로 현재 스토리 목표를 제한하고, 필드·대화·전투 상태별 관측을 전처리했습니다. 그래프 탐색으로 유효한 이동 후보를 만들고 이전·현재 상태와 맵 메모리로 행동 결과를 확인했습니다.",
-          "팀은 <strong>Track 1 (Lightweight)·Track 2 (Open) 리더보드 모두 1위</strong>를 기록하고 <strong>Track 2 종합 1위</strong>를 수상했습니다. 직접 기여 범위는 여러 게임 중 Pokémon Red Agent입니다."
+          "200 step 안에 7개 목표를 달성해야 했지만 소형 모델은 원시 관측만으로 목표와 경로를 함께 판단하기 어려웠습니다. <strong>코드가 유효한 행동 후보를 계산하고 모델이 선택하도록</strong> 역할을 나눴습니다.",
+          "지도·좌표·소지품·화면 텍스트로 진행 상태를 구성하고 Playbook에 하위 목표와 완료 조건을 명시했습니다. 그래프 탐색으로 이동 후보를 계산하고 상황별로 필요한 도구만 제공했습니다.",
+          "도구 호출의 정상 반환만으로는 행동 성공을 알 수 없어 실행 로그와 실제 상태 변화를 함께 평가했습니다. 좌표·화면·전투·소지품 변화를 근거로 반복 행동과 진행 실패를 확인했습니다.",
+          "실패 분석을 반영해 직전 행동과 상태 변화를 다음 판단에 제공하고, 상태별 유효 도구와 맵 전환 후보를 제한했습니다. 본인은 Pokémon Red를 담당했으며 팀은 Lightweight·Open Track 리더보드에서 모두 1위를 기록했습니다."
         ],
         "tags": [
+          "Python",
           "LLM Agent",
           "MCP",
           "PyBoy",
@@ -145,59 +144,74 @@
         ]
       },
       {
-        "title": "개인 맞춤형 쇼핑 컨시어지 Agent PoC",
-        "subtitle": "롯데이노베이트 · 고객 요구 구체화, DB 도구·중단 및 재개 흐름 구현",
+        "title": "쇼핑 컨시어지 Agent PoC · 고객 데이터 기반 개인화 추천",
+        "subtitle": "롯데이노베이트 · 고객사 추천 시나리오 조율·평가 지표 설계·DB Tool 및 Agent 워크플로우 구현",
         "date": "2025.05 – 2025.07",
-        "summary": "3개월의 PoC 기간에 사용자 프로필·구매 이력·상품 DB를 연결했습니다. 사용자가 말하지 않은 가격대나 상품 조건을 모델이 도구 인자로 만들어내는 오류를 해결했습니다.",
+        "summary": "고객사의 회원·구매 이력과 상품 DB를 연결해 자연어 요청에 맞는 상품을 추천하는 Agent PoC입니다. 필수 조건이 불명확할 때 모델이 값을 추측하는 대신 사용자에게 확인한 뒤 추천을 이어가도록 실행 흐름을 설계했습니다.",
         "bullets": [
-          "고객사·내부 구성원과 추천 및 후속 필터링 시나리오를 정리하고, 사용자 조회·상품 조회·대화 상태의 책임을 분리했습니다.",
-          "짧은 개발 기간을 고려해 추가 학습보다 워크플로 개선을 선택했습니다. 필수 인자가 없으면 실행을 중단하고 구체적인 추가 질문을 한 뒤, <strong>검증된 사용자 답변으로 재개</strong>하도록 수정했습니다. 일반·후속 질의 시나리오에서 사용자 조건의 반영을 확인했습니다."
+          "기존 추천 방식은 과거 구매 이력이나 유사 사용자 데이터에 치우쳐 현재 질의의 맥락과 상품 속성을 함께 반영하기 어려웠습니다. 고객 프로필·구매 이력·상품 DB를 연결해 <strong>개인화 추천의 가능성을 검증하는 PoC</strong>로 문제를 정의했습니다.",
+          "고객사와 일반 추천·후속 조건 질의의 기대 결과를 정리하고, Smolagents 기반으로 사용자 정보와 상품 정보를 조회하는 Tool을 분리해 구현했습니다. 고객 데이터 기반 평가 지표를 설계해 호출 성공과 개인화 조건 충족을 구분했습니다.",
+          "평가에서 Tool 호출은 성공해도 사용자 조건에 맞지 않는 추천을 확인했습니다. 호출 순서와 입력값을 추적해 모델이 누락된 가격대·상품 조건을 임의로 채우는 문제를 원인으로 파악했습니다.",
+          "추측을 막는 프롬프트를 보강해도 문제가 반복돼, DB에서 확인할 정보와 사용자에게 물어야 할 조건을 분리했습니다. 필수 정보가 부족하면 <strong>실행 중단 → 추가 질문 → 답변 반영 후 재개</strong>하도록 워크플로우를 바꿨습니다."
         ],
         "tags": [
           "Python",
           "Smolagents",
+          "MCP",
           "Tool Calling",
-          "DB Integration",
-          "Interrupt / Resume"
+          "사용자·상품 DB 연동",
+          "Agent 워크플로우"
         ]
       }
     ],
     "research": [
       {
-        "title": "검색 Agent의 요구조건 충족과 탐색 궤적 평가",
-        "subtitle": "Requirement-Aware Search Agent Trajectory Evaluation · 제1저자, 심사 중",
+        "title": "Search Agent · 요구조건 기반 검색 과정 평가",
+        "subtitle": "롯데이노베이트 · 문제 정의·평가 기준 설계·기준 모델 재현·실험 분석 · 제1저자, AAAI 2027 심사 중",
         "date": "2026.02 – 2026.06",
-        "summary": "최종 정답만으로는 중간 개체의 조건을 검증하지 않은 채 다음 개체로 탐색을 확장하는 실패를 놓칩니다. 이 현상을 Premature Downstream Expansion으로 정의하고, 질문의 요구조건이 실제 근거로 충족됐는지 평가하는 프레임워크를 제안했습니다.",
+        "summary": "다단계 웹 검색 Agent의 최종 정답 뒤에 숨은 조건 검증 누락을 측정하는 연구입니다. 질문별 필수 요구조건을 검색 과정의 근거와 대조해, 정답률만으로 드러나지 않는 실패를 진단했습니다.",
         "bullets": [
-          "목표·중간 개체와 원자적 요구조건을 분리하는 <strong>Requirement Closure Rubric</strong>을 설계했습니다. 요구조건 정제, 의존성 그래프 구성·가지치기, 단서 해결과 LLM-as-a-Judge 기반 턴별 근거 검증 파이프라인을 구현했습니다.",
-          "GAIA·FRAMES·BrowseComp의 <strong>150문항, 10개 순차·병렬 Agent 설정, 1,500개 궤적</strong>을 공통 도구 환경에서 평가했습니다. 정답 정확도와 근거 충족을 구분해, 답이 맞아도 요구조건 검증이 빠질 수 있는 오류를 분석했습니다."
+          "병렬 검색의 중복을 메모리로 조정하려 했으나, 순차 검색에서도 <strong>미검증 후보를 다음 탐색의 전제로 삼는 실패</strong>를 발견했습니다. 연구 문제를 검색 간 조율에서 조건 검증 누락의 진단으로 바꿨습니다.",
+          "최종 정답만으로는 이 실패를 구분할 수 없어 질문을 대상·연결 개체·세부 조건으로 분해하는 Requirement Closure Rubric을 설계했습니다. 단서 발견과 조건 충족, 근거 완결성을 각각 평가했습니다.",
+          "기존 방법의 검색 결과 선택·요약 규칙을 유지하며 10개 Agent 설정으로 150문항을 설정별 3회 반복 평가했습니다. <strong>평균 정답률 17.5%와 필수 근거를 확인한 인증 정확도 2.5%</strong>의 차이를 확인했습니다.",
+          "요구조건의 누락·중복을 정제하고 근거 해석과 점수 집계를 분리해 평가 절차를 보완했습니다. 미해결 조건을 추적하고 다음 탐색 전에 검증하는 행동을 후속 학습 목표로 제안해 AAAI 2027에 제출했습니다."
         ],
         "tags": [
-          "Benchmark Design",
+          "Python",
           "LLM-as-a-Judge",
           "Entity Graph",
-          "Agent Evaluation"
+          "Benchmark Design",
+          "Trajectory Evaluation"
         ]
       },
       {
-        "title": "ECO Decoding · 제어 가능한 대화 생성",
-        "subtitle": "성균관대학교 · 제1저자, EMNLP 2025 Main Conference",
+        "title": "ECO Decoding · 엔트로피 기반 대화 생성 제어",
+        "subtitle": "성균관대학교 자연어처리 연구실 · 문제 정의·알고리즘 설계·실험 및 논문 작성 · EMNLP 2025 Main Conference 제1저자",
         "date": "2023 – 2025",
-        "summary": "고정된 제어 강도가 불필요하게 다음 토큰을 바꾸거나 문장 유창성을 해치는 문제를 분석했습니다. 추가 학습이나 모델 구조 변경 없이 토큰별 엔트로피로 제어 강도를 조정하는 디코딩 방법을 제안했습니다.",
+        "summary": "대화 응답의 감정·대화행위를 제어하면서 문법 품질을 유지하기 위한 생성 방법을 연구했습니다. 토큰마다 제어 강도를 조절하는 ECO Decoding을 제안하고 자동·사람 평가와 구성 요소 실험으로 검증했습니다.",
         "bullets": [
-          "DailyDialog·MultiWOZ에서 DialoGPT와 LLaMA2를 감정·대화행위·다중 속성 조건으로 비교하고, 토큰·품사별 분석, ablation, 자동 지표와 사람 평가로 검증했습니다.",
-          "유창성을 유지하면서 <strong>속성 제어 성능을 평균 3.1%p 개선</strong>했습니다. 논문은 EMNLP 2025 Main Conference에 게재됐습니다."
+          "기존 weighted decoding은 제어 강도를 높일수록 문법·유창성이 저하됐습니다. 고정 가중치가 생성 단계별 불확실성을 반영하지 못한다고 보고 <strong>추가 언어모델 학습 없이 토큰별 제어 강도를 바꾸는 방법</strong>을 선택했습니다.",
+          "언어모델과 속성 분류기의 엔트로피로 가중치를 조절하는 ECO Decoding을 설계해, 생성 단계마다 언어모델의 출력을 보존할지 속성 제어를 강화할지 결정했습니다.",
+          "DailyDialog·MultiWOZ에서 감정·대화행위의 단일·복수 속성 제어를 평가했습니다. 유사한 문법 품질 조건에서 기존 방법과 제어 정확도를 비교하고 사람 평가로 생성 품질을 점검했습니다.",
+          "개선이 제안한 원리에서 비롯됐는지 확인하려고 품사별 엔트로피 분석, 구성 요소 제거와 반대 가중치 실험을 수행했습니다. 심사 의견에 따라 검증을 보강해 <strong>EMNLP 2025 Main Conference에 제1저자로 게재</strong>했습니다."
         ],
         "tags": [
+          "Python",
           "PyTorch",
-          "Controllable Generation",
-          "Entropy",
-          "Decoding"
+          "Hugging Face Transformers",
+          "Weighted Decoding",
+          "Entropy Analysis",
+          "Ablation",
+          "Human Evaluation"
         ],
         "links": [
           {
             "label": "논문",
-            "url": "https://arxiv.org/abs/2511.01568"
+            "url": "https://aclanthology.org/2025.emnlp-main.1437/"
+          },
+          {
+            "label": "코드",
+            "url": "https://github.com/seummin/ECODecoding"
           }
         ]
       },
@@ -372,32 +386,28 @@
     ],
     "projects": [
       {
-        "title": "Conversation-Based User Profile Memory",
-        "subtitle": "LOTTE INNOVATE · Problem definition, evaluation, memory APIs, and asynchronous processing",
+        "title": "User Profile Memory · Conversation-Based Personalization",
+        "subtitle": "LOTTE Innovate · Memory proposal, evaluation design, service implementation and operations",
         "date": "2025 – 2026",
-        "summary": "Built structured profiles of stable user occupations, interests, and preferences to preserve context across sessions while addressing the cost and latency of repeatedly supplying entire conversation histories.",
+        "summary": "Designed and deployed profile memory for an internal chat service so user roles and interests remain useful across sessions. Evaluated personalization on real conversations and made bulk updates recoverable when individual tasks fail.",
         "bullets": [
-          "Analyzed real queries and selected domain-dependent acronym interpretation as an evaluation task. From 50 source users, constructed a benchmark of <strong>44 users, 326 acronyms, and 454 conversations</strong>, checking for answer leakage and duplicate cases.",
-          "Compared full-history versus user-only extraction and system versus user message injection. On the same acronym benchmark, improved GPT-4.1-mini accuracy from <strong>68.94% without profiles to 80.40% (+11.46 percentage points)</strong>.",
-          "Split long updates into jobs and per-user conversation-chunk tasks. Implemented progress queries, partial-success reporting, chunk-level retries, and per-user write locks. Coordinated post-update cache refresh with the backend to address stale profiles.",
-          "In a separate batch performance experiment, parallel processing reduced mean processing time from <strong>33.31 s to 19.77 s (40.6%)</strong>. Classified failures in 698 structured-output tests into 4 JSON errors and 27 null-input errors to identify distinct improvement targets."
+          "Across sessions, the chat service could not reuse a user’s role and interests. Re-sending the entire history increased context length and latency, so I <strong>proposed structured profile memory</strong> for reusable information.",
+          "An existing memory design caused repeated LLM calls, delayed updates, and accumulated unused facts. I first asked <strong>which memories actually improve responses</strong> and designed an evaluation around that question.",
+          "Structured job, interest, and technical details from real work conversations; selected user-dependent acronym interpretation as the personalization task.",
+          "On 454 evaluation conversations from real logs, acronym interpretation accuracy rose from <strong>68.94% to 80.40%</strong> with profiles. I used the result to support service adoption.",
+          "When updates timed out, completion was unclear and the entire batch had to be rerun. I added asynchronous user/conversation-level jobs and progress tracking to retry only failed segments, while limiting concurrency to the serving API capacity."
         ],
         "tags": [
           "Python",
-          "Structured Output",
           "FastAPI",
-          "Job / Worker",
-          "DB / Cache",
-          "HMAC"
+          "Structured Output",
+          "User Profile Memory",
+          "Asynchronous Processing"
         ],
         "results": [
           {
-            "value": "+11.46 pp",
+            "value": "+11.46%p",
             "label": "Acronym interpretation accuracy"
-          },
-          {
-            "value": "−40.6%",
-            "label": "Mean batch processing time"
           }
         ]
       },
@@ -427,15 +437,18 @@
         ]
       },
       {
-        "title": "ORAK Game Agent · Pokémon Red",
-        "subtitle": "LOTTE INNOVATE · Pokémon Red planning, observation processing, state memory, and action selection",
+        "title": "ORAK Game Agent Challenge · Pokémon Red Agent",
+        "subtitle": "LOTTE Innovate · Pokémon Red observation preprocessing, progress state and action design",
         "date": "Feb 2026 – Apr 2026",
-        "summary": "Analyzed repeated failures when a small LLM had to interpret coordinates, movement, dialogue, and battles together in a partially observed game. Designed an agent that turns this reasoning burden into state-specific action selection.",
+        "summary": "Built a Pokémon Red agent for game objectives under a strict action budget. Code organizes environmental state and valid moves; the model selects actions aligned with the current objective.",
         "bullets": [
-          "Used a playbook to constrain the current story objective; preprocessed field, dialogue, and battle observations. Generated valid movement candidates with graph search and checked action outcomes against previous/current state and map memory.",
-          "The team ranked <strong>1st on both Track 1 (Lightweight) and Track 2 (Open) leaderboards</strong> and received <strong>1st place overall in Track 2</strong>. My direct contribution was the Pokémon Red agent within the multi-game team."
+          "The agent had 200 steps to achieve seven goals, while a small model struggled to infer objectives and routes directly from raw observations. I <strong>separated valid-candidate computation in code from model selection</strong>.",
+          "I combined maps, coordinates, inventory, and screen text into progress state, encoded subgoals and completion conditions in a playbook, computed moves with graph search, and exposed only tools relevant to each state.",
+          "A successful tool call did not establish a successful action, so I evaluated execution logs against actual changes in position, screen, battle, and inventory to identify loops and stalled progress.",
+          "I fed previous actions and observed state changes into the next decision, and constrained state-specific tools and map transitions. I owned the Pokémon Red agent; the team placed first on both Lightweight and Open Track leaderboards."
         ],
         "tags": [
+          "Python",
           "LLM Agent",
           "MCP",
           "PyBoy",
@@ -468,59 +481,74 @@
         ]
       },
       {
-        "title": "Personalized Shopping Concierge Agent PoC",
-        "subtitle": "LOTTE INNOVATE · Requirements, database tools, and interrupt/resume workflows",
+        "title": "Shopping Concierge Agent PoC · Data-Driven Recommendations",
+        "subtitle": "LOTTE Innovate · Client scenario alignment, evaluation metrics, DB tools and agent workflow",
         "date": "May 2025 – Jul 2025",
-        "summary": "Connected user profiles, purchase histories, and product databases in a three-month PoC. Addressed errors in which the model invented tool arguments such as price ranges or product constraints that the user had never supplied.",
+        "summary": "Connected a client’s customer profiles, purchase history, and product database to recommend products from natural-language requests. Designed the flow to clarify missing constraints rather than let the model invent them.",
         "bullets": [
-          "Worked with the client and internal collaborators to define recommendation and follow-up filtering scenarios, separating user lookup, product retrieval, and conversation-state responsibilities.",
-          "Chose workflow changes over additional training within the short development period. Interrupted execution when required arguments were missing, asked targeted clarification questions, and <strong>resumed with validated user answers</strong>. Checked that user constraints were reflected in general and follow-up query scenarios."
+          "Existing recommendations leaned on past purchases or similar users and struggled to reflect both the current request and product attributes. I scoped a PoC to <strong>test personalized recommendations</strong> across customer and product data.",
+          "With the client, I defined expected outcomes for initial and follow-up requests; I built separate Smolagents tools for customer and product data. Evaluation criteria distinguished successful tool calls from satisfaction of user constraints.",
+          "Evaluation found successful tool calls that still produced unsuitable recommendations. Tracing call order and inputs showed the model inventing missing price ranges and product conditions.",
+          "Prompt instructions against guessing were insufficient. I separated DB-verifiable facts from conditions requiring user input and changed the flow to <strong>interrupt, ask a clarifying question, then resume with the answer</strong>."
         ],
         "tags": [
           "Python",
           "Smolagents",
+          "MCP",
           "Tool Calling",
-          "DB Integration",
-          "Interrupt / Resume"
+          "Customer/Product DB",
+          "Agent Workflow"
         ]
       }
     ],
     "research": [
       {
-        "title": "Requirement-Aware Search Agent Trajectory Evaluation",
-        "subtitle": "First author · Manuscript under review",
+        "title": "Search Agent · Requirement-Aware Trajectory Evaluation",
+        "subtitle": "LOTTE Innovate · Problem definition, rubric design, baseline reproduction and analysis · First author, AAAI 2027 under review",
         "date": "Feb 2026 – Jun 2026",
-        "summary": "Final-answer-only evaluation can miss agents moving to dependent entities before verifying the current entity's constraints. Defined this failure as Premature Downstream Expansion and proposed a framework that checks whether evidence actually satisfies question-derived requirements.",
+        "summary": "Studied how multi-hop web search agents skip condition checks even when their final answers appear correct. Compared question requirements against evidence gathered during search to diagnose failures hidden by answer accuracy.",
         "bullets": [
-          "Designed a <strong>Requirement Closure Rubric</strong> separating target/bridge entities and atomic requirements. Implemented requirement refinement, dependency-graph construction and pruning, clue resolution, and turn-level evidence verification with LLM-as-a-Judge.",
-          "Evaluated <strong>150 questions, 10 sequential/parallel agent configurations, and 1,500 trajectories</strong> from GAIA, FRAMES, and BrowseComp in a common tool environment. Distinguished answer accuracy from evidence satisfaction to analyze correct answers with incomplete verification."
+          "I initially explored memory to coordinate parallel searches, but found that sequential agents also <strong>used unverified candidates as premises</strong>. I shifted the research question from search coordination to diagnosing missing verification.",
+          "Because final answers alone could not reveal this failure, I developed a Requirement Closure Rubric that separates target entities, linking entities, and atomic conditions, and evaluates clue discovery, condition satisfaction, and evidence completeness.",
+          "Preserving the baseline’s result selection and summarization rules, I evaluated 150 questions across 10 agent configurations with three runs each. <strong>Mean answer accuracy was 17.5%, while evidence-certified accuracy was 2.5%</strong>.",
+          "I refined missing or duplicated requirements and separated evidence interpretation from score aggregation. The resulting analysis motivates tracking unresolved conditions and verifying them before downstream search; the paper was submitted to AAAI 2027."
         ],
         "tags": [
-          "Benchmark Design",
+          "Python",
           "LLM-as-a-Judge",
           "Entity Graph",
-          "Agent Evaluation"
+          "Benchmark Design",
+          "Trajectory Evaluation"
         ]
       },
       {
-        "title": "ECO Decoding · Controllable Dialogue Generation",
-        "subtitle": "Sungkyunkwan University · First author, EMNLP 2025 Main Conference",
+        "title": "ECO Decoding · Entropy-Based Dialogue Control",
+        "subtitle": "Sungkyunkwan University NLP Lab · Problem definition, algorithm, experiments and writing · First author, EMNLP 2025 Main Conference",
         "date": "2023 – 2025",
-        "summary": "Analyzed how fixed-strength guidance can unnecessarily alter next-token choices or harm fluency. Proposed a decoding method that adjusts control strength using token-level entropy without additional training or changes to the model architecture.",
+        "summary": "Studied how to control emotion and dialogue acts while preserving grammatical quality. Proposed token-wise control strength and tested the mechanism through automatic and human evaluation and component experiments.",
         "bullets": [
-          "Compared DialoGPT and LLaMA2 on DailyDialog and MultiWOZ across emotion, dialogue-act, and multi-attribute conditions. Validated the method through token/POS analysis, ablations, automatic metrics, and human evaluation.",
-          "Improved <strong>attribute-control performance by 3.1 percentage points on average</strong> while maintaining fluency. Published at the EMNLP 2025 Main Conference."
+          "With existing weighted decoding, stronger control degraded grammar and fluency. I attributed this tradeoff to a fixed weight that ignored uncertainty at each generation step and chose a <strong>token-wise method without additional language-model training</strong>.",
+          "I designed ECO Decoding to use entropy from the language model and attribute classifier to decide when to preserve the base distribution and when to strengthen attribute control.",
+          "On DailyDialog and MultiWOZ, I evaluated single and multiple emotion/dialogue-act attributes, compared control accuracy under similar grammatical quality, and checked generation quality with human evaluation.",
+          "To test the proposed mechanism, I analyzed entropy by part of speech and ran component removal and reversed-weight experiments. I strengthened validation after review and published the first-author paper at EMNLP 2025 Main Conference."
         ],
         "tags": [
+          "Python",
           "PyTorch",
-          "Controllable Generation",
-          "Entropy",
-          "Decoding"
+          "Hugging Face Transformers",
+          "Weighted Decoding",
+          "Entropy Analysis",
+          "Ablation",
+          "Human Evaluation"
         ],
         "links": [
           {
             "label": "Paper",
-            "url": "https://arxiv.org/abs/2511.01568"
+            "url": "https://aclanthology.org/2025.emnlp-main.1437/"
+          },
+          {
+            "label": "Code",
+            "url": "https://github.com/seummin/ECODecoding"
           }
         ]
       },

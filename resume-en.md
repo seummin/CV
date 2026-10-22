@@ -35,18 +35,19 @@ Researched controllable dialogue generation and LLM reasoning evaluation.
 
 ## Selected Projects
 
-### Conversation-Based User Profile Memory | 2025 – 2026
+### User Profile Memory · Conversation-Based Personalization | 2025 – 2026
 
-LOTTE INNOVATE · Problem definition, evaluation, memory APIs, and asynchronous processing
+LOTTE Innovate · Memory proposal, evaluation design, service implementation and operations
 
-Built structured profiles of stable user occupations, interests, and preferences to preserve context across sessions while addressing the cost and latency of repeatedly supplying entire conversation histories.
+Designed and deployed profile memory for an internal chat service so user roles and interests remain useful across sessions. Evaluated personalization on real conversations and made bulk updates recoverable when individual tasks fail.
 
-- Analyzed real queries and selected domain-dependent acronym interpretation as an evaluation task. From 50 source users, constructed a benchmark of 44 users, 326 acronyms, and 454 conversations, checking for answer leakage and duplicate cases.
-- Compared full-history versus user-only extraction and system versus user message injection. On the same acronym benchmark, improved GPT-4.1-mini accuracy from 68.94% without profiles to 80.40% (+11.46 percentage points).
-- Split long updates into jobs and per-user conversation-chunk tasks. Implemented progress queries, partial-success reporting, chunk-level retries, and per-user write locks. Coordinated post-update cache refresh with the backend to address stale profiles.
-- In a separate batch performance experiment, parallel processing reduced mean processing time from 33.31 s to 19.77 s (40.6%). Classified failures in 698 structured-output tests into 4 JSON errors and 27 null-input errors to identify distinct improvement targets.
+- Across sessions, the chat service could not reuse a user’s role and interests. Re-sending the entire history increased context length and latency, so I proposed structured profile memory for reusable information.
+- An existing memory design caused repeated LLM calls, delayed updates, and accumulated unused facts. I first asked which memories actually improve responses and designed an evaluation around that question.
+- Structured job, interest, and technical details from real work conversations; selected user-dependent acronym interpretation as the personalization task.
+- On 454 evaluation conversations from real logs, acronym interpretation accuracy rose from 68.94% to 80.40% with profiles. I used the result to support service adoption.
+- When updates timed out, completion was unclear and the entire batch had to be rerun. I added asynchronous user/conversation-level jobs and progress tracking to retry only failed segments, while limiting concurrency to the serving API capacity.
 
-Python / Structured Output / FastAPI / Job / Worker / DB / Cache / HMAC
+Python / FastAPI / Structured Output / User Profile Memory / Asynchronous Processing
 
 ### Security-Monitoring LLM & Inference Service | Apr 2025 – Jul 2025
 
@@ -60,16 +61,18 @@ Developed an LLM that generates an attack decision, suspicious payload, and expl
 
 PyTorch / Hugging Face / Guided Decoding / Token Log Probability / vLLM / FastAPI
 
-### ORAK Game Agent · Pokémon Red | Feb 2026 – Apr 2026
+### ORAK Game Agent Challenge · Pokémon Red Agent | Feb 2026 – Apr 2026
 
-LOTTE INNOVATE · Pokémon Red planning, observation processing, state memory, and action selection
+LOTTE Innovate · Pokémon Red observation preprocessing, progress state and action design
 
-Analyzed repeated failures when a small LLM had to interpret coordinates, movement, dialogue, and battles together in a partially observed game. Designed an agent that turns this reasoning burden into state-specific action selection.
+Built a Pokémon Red agent for game objectives under a strict action budget. Code organizes environmental state and valid moves; the model selects actions aligned with the current objective.
 
-- Used a playbook to constrain the current story objective; preprocessed field, dialogue, and battle observations. Generated valid movement candidates with graph search and checked action outcomes against previous/current state and map memory.
-- The team ranked 1st on both Track 1 (Lightweight) and Track 2 (Open) leaderboards and received 1st place overall in Track 2. My direct contribution was the Pokémon Red agent within the multi-game team.
+- The agent had 200 steps to achieve seven goals, while a small model struggled to infer objectives and routes directly from raw observations. I separated valid-candidate computation in code from model selection.
+- I combined maps, coordinates, inventory, and screen text into progress state, encoded subgoals and completion conditions in a playbook, computed moves with graph search, and exposed only tools relevant to each state.
+- A successful tool call did not establish a successful action, so I evaluated execution logs against actual changes in position, screen, battle, and inventory to identify loops and stalled progress.
+- I fed previous actions and observed state changes into the next decision, and constrained state-specific tools and map transitions. I owned the Pokémon Red agent; the team placed first on both Lightweight and Open Track leaderboards.
 
-LLM Agent / MCP / PyBoy / Graph Search / State Memory
+Python / LLM Agent / MCP / PyBoy / Graph Search / State Memory
 [Competition](https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025)
 
 ### Financial & Economic Data Tools for an AI Assistant | Apr 2025 – Oct 2025
@@ -83,41 +86,48 @@ Mapped natural-language company names, dates, and economic concepts to external 
 
 Python / MCP / KRX / ECOS / API Validation / pytest
 
-### Personalized Shopping Concierge Agent PoC | May 2025 – Jul 2025
+### Shopping Concierge Agent PoC · Data-Driven Recommendations | May 2025 – Jul 2025
 
-LOTTE INNOVATE · Requirements, database tools, and interrupt/resume workflows
+LOTTE Innovate · Client scenario alignment, evaluation metrics, DB tools and agent workflow
 
-Connected user profiles, purchase histories, and product databases in a three-month PoC. Addressed errors in which the model invented tool arguments such as price ranges or product constraints that the user had never supplied.
+Connected a client’s customer profiles, purchase history, and product database to recommend products from natural-language requests. Designed the flow to clarify missing constraints rather than let the model invent them.
 
-- Worked with the client and internal collaborators to define recommendation and follow-up filtering scenarios, separating user lookup, product retrieval, and conversation-state responsibilities.
-- Chose workflow changes over additional training within the short development period. Interrupted execution when required arguments were missing, asked targeted clarification questions, and resumed with validated user answers. Checked that user constraints were reflected in general and follow-up query scenarios.
+- Existing recommendations leaned on past purchases or similar users and struggled to reflect both the current request and product attributes. I scoped a PoC to test personalized recommendations across customer and product data.
+- With the client, I defined expected outcomes for initial and follow-up requests; I built separate Smolagents tools for customer and product data. Evaluation criteria distinguished successful tool calls from satisfaction of user constraints.
+- Evaluation found successful tool calls that still produced unsuitable recommendations. Tracing call order and inputs showed the model inventing missing price ranges and product conditions.
+- Prompt instructions against guessing were insufficient. I separated DB-verifiable facts from conditions requiring user input and changed the flow to interrupt, ask a clarifying question, then resume with the answer.
 
-Python / Smolagents / Tool Calling / DB Integration / Interrupt / Resume
+Python / Smolagents / MCP / Tool Calling / Customer/Product DB / Agent Workflow
 
 ## Research Experience
 
-### Requirement-Aware Search Agent Trajectory Evaluation | Feb 2026 – Jun 2026
+### Search Agent · Requirement-Aware Trajectory Evaluation | Feb 2026 – Jun 2026
 
-First author · Manuscript under review
+LOTTE Innovate · Problem definition, rubric design, baseline reproduction and analysis · First author, AAAI 2027 under review
 
-Final-answer-only evaluation can miss agents moving to dependent entities before verifying the current entity's constraints. Defined this failure as Premature Downstream Expansion and proposed a framework that checks whether evidence actually satisfies question-derived requirements.
+Studied how multi-hop web search agents skip condition checks even when their final answers appear correct. Compared question requirements against evidence gathered during search to diagnose failures hidden by answer accuracy.
 
-- Designed a Requirement Closure Rubric separating target/bridge entities and atomic requirements. Implemented requirement refinement, dependency-graph construction and pruning, clue resolution, and turn-level evidence verification with LLM-as-a-Judge.
-- Evaluated 150 questions, 10 sequential/parallel agent configurations, and 1,500 trajectories from GAIA, FRAMES, and BrowseComp in a common tool environment. Distinguished answer accuracy from evidence satisfaction to analyze correct answers with incomplete verification.
+- I initially explored memory to coordinate parallel searches, but found that sequential agents also used unverified candidates as premises. I shifted the research question from search coordination to diagnosing missing verification.
+- Because final answers alone could not reveal this failure, I developed a Requirement Closure Rubric that separates target entities, linking entities, and atomic conditions, and evaluates clue discovery, condition satisfaction, and evidence completeness.
+- Preserving the baseline’s result selection and summarization rules, I evaluated 150 questions across 10 agent configurations with three runs each. Mean answer accuracy was 17.5%, while evidence-certified accuracy was 2.5%.
+- I refined missing or duplicated requirements and separated evidence interpretation from score aggregation. The resulting analysis motivates tracking unresolved conditions and verifying them before downstream search; the paper was submitted to AAAI 2027.
 
-Benchmark Design / LLM-as-a-Judge / Entity Graph / Agent Evaluation
+Python / LLM-as-a-Judge / Entity Graph / Benchmark Design / Trajectory Evaluation
 
-### ECO Decoding · Controllable Dialogue Generation | 2023 – 2025
+### ECO Decoding · Entropy-Based Dialogue Control | 2023 – 2025
 
-Sungkyunkwan University · First author, EMNLP 2025 Main Conference
+Sungkyunkwan University NLP Lab · Problem definition, algorithm, experiments and writing · First author, EMNLP 2025 Main Conference
 
-Analyzed how fixed-strength guidance can unnecessarily alter next-token choices or harm fluency. Proposed a decoding method that adjusts control strength using token-level entropy without additional training or changes to the model architecture.
+Studied how to control emotion and dialogue acts while preserving grammatical quality. Proposed token-wise control strength and tested the mechanism through automatic and human evaluation and component experiments.
 
-- Compared DialoGPT and LLaMA2 on DailyDialog and MultiWOZ across emotion, dialogue-act, and multi-attribute conditions. Validated the method through token/POS analysis, ablations, automatic metrics, and human evaluation.
-- Improved attribute-control performance by 3.1 percentage points on average while maintaining fluency. Published at the EMNLP 2025 Main Conference.
+- With existing weighted decoding, stronger control degraded grammar and fluency. I attributed this tradeoff to a fixed weight that ignored uncertainty at each generation step and chose a token-wise method without additional language-model training.
+- I designed ECO Decoding to use entropy from the language model and attribute classifier to decide when to preserve the base distribution and when to strengthen attribute control.
+- On DailyDialog and MultiWOZ, I evaluated single and multiple emotion/dialogue-act attributes, compared control accuracy under similar grammatical quality, and checked generation quality with human evaluation.
+- To test the proposed mechanism, I analyzed entropy by part of speech and ran component removal and reversed-weight experiments. I strengthened validation after review and published the first-author paper at EMNLP 2025 Main Conference.
 
-PyTorch / Controllable Generation / Entropy / Decoding
-[Paper](https://arxiv.org/abs/2511.01568)
+Python / PyTorch / Hugging Face Transformers / Weighted Decoding / Entropy Analysis / Ablation / Human Evaluation
+[Paper](https://aclanthology.org/2025.emnlp-main.1437/)
+[Code](https://github.com/seummin/ECODecoding)
 
 ### Twenty Questions Benchmark for LLM Reasoning | 2023 – 2024
 

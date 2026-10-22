@@ -31,12 +31,10 @@ def entry(item):
     bullets = "".join(f"<li>{line}</li>" for line in item.get("bullets", []))
     tags = "".join(f"<li>{e(tag)}</li>" for tag in item.get("tags", []))
     links = "".join(f'<a href="{e(link["url"])}">{e(link["label"]) }</a>' for link in item.get("links", []))
-    results = "".join(f'<div><strong>{e(result["value"])}</strong><span>{e(result["label"])}</span></div>' for result in item.get("results", []))
     return f'''<article class="entry">
       <div class="entry-heading"><h3>{e(item['title'])}</h3><p class="date">{e(item['date'])}</p></div>
       <p class="entry-subtitle">{e(item['subtitle'])}</p>
       <p class="entry-summary">{item['summary']}</p>
-      {f'<div class="project-results">{results}</div>' if results else ''}
       {f'<ul class="entry-bullets">{bullets}</ul>' if bullets else ''}
       {f'<ul class="tags" aria-label="Technologies">{tags}</ul>' if tags else ''}
       {f'<div class="entry-links">{links}</div>' if links else ''}

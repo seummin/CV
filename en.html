@@ -44,7 +44,6 @@
       <div class="entry-heading"><h3>LOTTE INNOVATE</h3><p class="date">Feb 2025 – Present</p></div>
       <p class="entry-subtitle">AI Engineer · AI Tech Lab</p>
       <p class="entry-summary">Develop LLM-powered capabilities and AI agents for the group’s internal AI platform and client services. Analyze business requirements to define the problems to solve and the scope of service deployment.</p>
-      
       <ul class="entry-bullets"><li>Design agent architectures for internal services and client PoCs. Implement MCP-based tools that connect databases and external APIs, along with personalization based on user information. Define agent roles and execution flows around task characteristics and the reasoning capabilities of the models.</li><li>Analyze research contributions and limitations, and validate their applicability in service environments. Adapt methods to limited data and operational constraints, connecting model training and evaluation with serving and operations to translate research into deployed services.</li><li>Design task-specific evaluation datasets, metrics, and comparative experiments to quantitatively validate AI services. Analyze errors missed by existing evaluations and failures during execution to improve evaluation methods and AI services.</li></ul>
       
       
@@ -52,7 +51,6 @@
       <div class="entry-heading"><h3>Sungkyunkwan University · NLP Lab</h3><p class="date">Mar 2023 – Feb 2025</p></div>
       <p class="entry-subtitle">Graduate Research Assistant</p>
       <p class="entry-summary">Researched controllable dialogue generation and LLM reasoning evaluation.</p>
-      
       <ul class="entry-bullets"><li>Proposed ECO Decoding to adjust attribute-control strength using token-level entropy; validated it with automatic metrics, ablations, and human evaluation.</li><li>Built a Twenty Questions reasoning benchmark with 1,000 samples and a BERT environment model, and registered it as a software asset.</li></ul>
       
       
@@ -60,7 +58,6 @@
       <div class="entry-heading"><h3>User Profile Memory · Conversation-Based Personalization</h3><p class="date">2025 – 2026</p></div>
       <p class="entry-subtitle">LOTTE Innovate · Memory proposal, evaluation design, service implementation and operations</p>
       <p class="entry-summary">Designed and deployed profile memory for an internal chat service so user roles and interests remain useful across sessions. Evaluated personalization on real conversations and made bulk updates recoverable when individual tasks fail.</p>
-      <div class="project-results"><div><strong>+11.46%p</strong><span>Acronym interpretation accuracy</span></div></div>
       <ul class="entry-bullets"><li>Across sessions, the chat service could not reuse a user’s role and interests. Re-sending the entire history increased context length and latency, so I <strong>proposed structured profile memory</strong> for reusable information.</li><li>An existing memory design caused repeated LLM calls, delayed updates, and accumulated unused facts. I first asked <strong>which memories actually improve responses</strong> and designed an evaluation around that question.</li><li>Structured job, interest, and technical details from real work conversations; selected user-dependent acronym interpretation as the personalization task.</li><li>On 454 evaluation conversations from real logs, acronym interpretation accuracy rose from <strong>68.94% to 80.40%</strong> with profiles. I used the result to support service adoption.</li><li>When updates timed out, completion was unclear and the entire batch had to be rerun. I added asynchronous user/conversation-level jobs and progress tracking to retry only failed segments, while limiting concurrency to the serving API capacity.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>FastAPI</li><li>Structured Output</li><li>User Profile Memory</li><li>Asynchronous Processing</li></ul>
       
@@ -68,7 +65,6 @@
       <div class="entry-heading"><h3>Security-Monitoring LLM &amp; Inference Service</h3><p class="date">Apr 2025 – Jul 2025</p></div>
       <p class="entry-subtitle">LOTTE INNOVATE · Data/task design, fine-tuning, confidence scoring, and inference APIs</p>
       <p class="entry-summary">Developed an LLM that generates an attack decision, suspicious payload, and explanation together, addressing disagreement between separate classification and explanation pipelines and making supporting evidence available to security analysts.</p>
-      <div class="project-results"><div><strong>+7.3 pp</strong><span>Attack-detection accuracy over the existing classifier</span></div></div>
       <ul class="entry-bullets"><li>Identified mislabeled records and inconsistent evidence through model-error analysis, requested relabeling from data owners, and compared and trained models on cleaned data with a unified JSON task. Improved attack-detection accuracy by <strong>7.3 percentage points over the existing classifier</strong>.</li><li>Without risk-probability labels or latency headroom for repeated inference, derived <strong>single-pass confidence</strong> from attack-label token log probabilities. Fixed the output schema with Guided Decoding and integrated vLLM / FastAPI with the security system.</li><li>Recorded aggregate inference time: <strong>642 requests in 58.706 s</strong> in a single test. Published the method as a first-author HCLT-KACL 2025 paper.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>PyTorch</li><li>Hugging Face</li><li>Guided Decoding</li><li>Token Log Probability</li><li>vLLM</li><li>FastAPI</li></ul>
       
@@ -76,7 +72,6 @@
       <div class="entry-heading"><h3>ORAK Game Agent Challenge · Pokémon Red Agent</h3><p class="date">Feb 2026 – Apr 2026</p></div>
       <p class="entry-subtitle">LOTTE Innovate · Pokémon Red observation preprocessing, progress state and action design</p>
       <p class="entry-summary">Built a Pokémon Red agent for game objectives under a strict action budget. Code organizes environmental state and valid moves; the model selects actions aligned with the current objective.</p>
-      
       <ul class="entry-bullets"><li>The agent had 200 steps to achieve seven goals, while a small model struggled to infer objectives and routes directly from raw observations. I <strong>separated valid-candidate computation in code from model selection</strong>.</li><li>I combined maps, coordinates, inventory, and screen text into progress state, encoded subgoals and completion conditions in a playbook, computed moves with graph search, and exposed only tools relevant to each state.</li><li>A successful tool call did not establish a successful action, so I evaluated execution logs against actual changes in position, screen, battle, and inventory to identify loops and stalled progress.</li><li>I fed previous actions and observed state changes into the next decision, and constrained state-specific tools and map transitions. I owned the Pokémon Red agent; the team placed first on both Lightweight and Open Track leaderboards.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>LLM Agent</li><li>MCP</li><li>PyBoy</li><li>Graph Search</li><li>State Memory</li></ul>
       <div class="entry-links"><a href="https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025">Competition</a></div>
@@ -84,7 +79,6 @@
       <div class="entry-heading"><h3>Financial &amp; Economic Data Tools for an AI Assistant</h3><p class="date">Apr 2025 – Oct 2025</p></div>
       <p class="entry-subtitle">LOTTE INNOVATE · Agent tool design, development, and operation</p>
       <p class="entry-summary">Mapped natural-language company names, dates, and economic concepts to external API identifiers so an internal AI assistant could retrieve Korean equities, financial statements, and macroeconomic indicators.</p>
-      
       <ul class="entry-bullets"><li>Integrated sources including KRX and the Bank of Korea's ECOS. Added company-name mapping, candidate search, date-range and market-calendar checks, and schema constraints to handle invalid arguments before data retrieval.</li><li>Implemented caching, historical backfill, retry/fallback logic, and error isolation; verified core retrieval and exception paths with pytest. Converted the tools to MCP interfaces to ground agent responses in retrieved data.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>MCP</li><li>KRX</li><li>ECOS</li><li>API Validation</li><li>pytest</li></ul>
       
@@ -92,7 +86,6 @@
       <div class="entry-heading"><h3>Shopping Concierge Agent PoC · Data-Driven Recommendations</h3><p class="date">May 2025 – Jul 2025</p></div>
       <p class="entry-subtitle">LOTTE Innovate · Client scenario alignment, evaluation metrics, DB tools and agent workflow</p>
       <p class="entry-summary">Connected a client’s customer profiles, purchase history, and product database to recommend products from natural-language requests. Designed the flow to clarify missing constraints rather than let the model invent them.</p>
-      
       <ul class="entry-bullets"><li>Existing recommendations leaned on past purchases or similar users and struggled to reflect both the current request and product attributes. I scoped a PoC to <strong>test personalized recommendations</strong> across customer and product data.</li><li>With the client, I defined expected outcomes for initial and follow-up requests; I built separate Smolagents tools for customer and product data. Evaluation criteria distinguished successful tool calls from satisfaction of user constraints.</li><li>Evaluation found successful tool calls that still produced unsuitable recommendations. Tracing call order and inputs showed the model inventing missing price ranges and product conditions.</li><li>Prompt instructions against guessing were insufficient. I separated DB-verifiable facts from conditions requiring user input and changed the flow to <strong>interrupt, ask a clarifying question, then resume with the answer</strong>.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>Smolagents</li><li>MCP</li><li>Tool Calling</li><li>Customer/Product DB</li><li>Agent Workflow</li></ul>
       
@@ -100,7 +93,6 @@
       <div class="entry-heading"><h3>Search Agent · Requirement-Aware Trajectory Evaluation</h3><p class="date">Feb 2026 – Jun 2026</p></div>
       <p class="entry-subtitle">LOTTE Innovate · Problem definition, rubric design, baseline reproduction and analysis · First author, AAAI 2027 under review</p>
       <p class="entry-summary">Studied how multi-hop web search agents skip condition checks even when their final answers appear correct. Compared question requirements against evidence gathered during search to diagnose failures hidden by answer accuracy.</p>
-      
       <ul class="entry-bullets"><li>I initially explored memory to coordinate parallel searches, but found that sequential agents also <strong>used unverified candidates as premises</strong>. I shifted the research question from search coordination to diagnosing missing verification.</li><li>Because final answers alone could not reveal this failure, I developed a Requirement Closure Rubric that separates target entities, linking entities, and atomic conditions, and evaluates clue discovery, condition satisfaction, and evidence completeness.</li><li>Preserving the baseline’s result selection and summarization rules, I evaluated 150 questions across 10 agent configurations with three runs each. <strong>Mean answer accuracy was 17.5%, while evidence-certified accuracy was 2.5%</strong>.</li><li>I refined missing or duplicated requirements and separated evidence interpretation from score aggregation. The resulting analysis motivates tracking unresolved conditions and verifying them before downstream search; the paper was submitted to AAAI 2027.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>LLM-as-a-Judge</li><li>Entity Graph</li><li>Benchmark Design</li><li>Trajectory Evaluation</li></ul>
       
@@ -108,7 +100,6 @@
       <div class="entry-heading"><h3>ECO Decoding · Entropy-Based Dialogue Control</h3><p class="date">2023 – 2025</p></div>
       <p class="entry-subtitle">Sungkyunkwan University NLP Lab · Problem definition, algorithm, experiments and writing · First author, EMNLP 2025 Main Conference</p>
       <p class="entry-summary">Studied how to control emotion and dialogue acts while preserving grammatical quality. Proposed token-wise control strength and tested the mechanism through automatic and human evaluation and component experiments.</p>
-      
       <ul class="entry-bullets"><li>With existing weighted decoding, stronger control degraded grammar and fluency. I attributed this tradeoff to a fixed weight that ignored uncertainty at each generation step and chose a <strong>token-wise method without additional language-model training</strong>.</li><li>I designed ECO Decoding to use entropy from the language model and attribute classifier to decide when to preserve the base distribution and when to strengthen attribute control.</li><li>On DailyDialog and MultiWOZ, I evaluated single and multiple emotion/dialogue-act attributes, compared control accuracy under similar grammatical quality, and checked generation quality with human evaluation.</li><li>To test the proposed mechanism, I analyzed entropy by part of speech and ran component removal and reversed-weight experiments. I strengthened validation after review and published the first-author paper at EMNLP 2025 Main Conference.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>PyTorch</li><li>Hugging Face Transformers</li><li>Weighted Decoding</li><li>Entropy Analysis</li><li>Ablation</li><li>Human Evaluation</li></ul>
       <div class="entry-links"><a href="https://aclanthology.org/2025.emnlp-main.1437/">Paper</a><a href="https://github.com/seummin/ECODecoding">Code</a></div>
@@ -116,7 +107,6 @@
       <div class="entry-heading"><h3>Twenty Questions Benchmark for LLM Reasoning</h3><p class="date">2023 – 2024</p></div>
       <p class="entry-subtitle">Sungkyunkwan University · Benchmark, environment model, and state tracking</p>
       <p class="entry-summary">Built an interactive evaluation loop in which an LLM asks questions and a BERT environment model responds Yes/No/Unknown. Compared answer accuracy and question efficiency on 1,000 controlled samples, analyzed recurring failures, and registered the benchmark as a software asset.</p>
-      
       
       <ul class="tags" aria-label="Technologies"><li>BERT</li><li>WordNet</li><li>Interactive Evaluation</li></ul>
       

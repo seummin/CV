@@ -44,7 +44,6 @@
       <div class="entry-heading"><h3>롯데이노베이트</h3><p class="date">2025.02 – 현재</p></div>
       <p class="entry-subtitle">AI Engineer · AI Tech Lab</p>
       <p class="entry-summary">그룹사 내부 AI 플랫폼과 고객사 서비스를 위한 LLM 기반 기능과 AI Agent를 개발합니다. 현업 요구를 분석해 해결할 문제와 서비스 적용 범위를 구체화합니다.</p>
-      
       <ul class="entry-bullets"><li>사내 서비스와 고객사 PoC의 목적에 맞는 Agent 구조를 설계합니다. DB와 외부 API를 연동하는 MCP 기반 도구와 사용자 정보 기반 개인화를 구현하고 태스크의 특성과 모델의 추론 역량에 맞춰 Agent의 역할과 실행 흐름을 설계합니다.</li><li>연구의 기여점과 한계를 분석하고 서비스 환경에서의 유효성을 검증합니다. 제한된 데이터와 운영 제약에 맞게 방법을 재설계하고 모델 학습과 평가부터 서빙과 운영까지 연결해 연구 결과를 실제 서비스로 구현합니다.</li><li>태스크에 맞는 평가 데이터와 지표 및 비교 실험을 설계해 AI 서비스를 정량적으로 검증합니다. 기존 평가에서 드러나지 않는 오류와 실행 과정의 실패를 분석하고 평가 방식과 AI 서비스를 개선합니다.</li></ul>
       
       
@@ -52,7 +51,6 @@
       <div class="entry-heading"><h3>성균관대학교 자연어처리 연구실</h3><p class="date">2023.03 – 2025.02</p></div>
       <p class="entry-subtitle">석사과정 연구원</p>
       <p class="entry-summary">제어 가능한 대화 생성과 LLM 추론 평가를 연구했습니다.</p>
-      
       <ul class="entry-bullets"><li>토큰별 엔트로피로 속성 제어 강도를 조정하는 ECO Decoding을 제안하고, 자동 평가·ablation·사람 평가로 검증했습니다.</li><li>1,000개 샘플과 BERT 환경 모델로 스무고개형 추론 벤치마크를 구축하고 소프트웨어 자산으로 등록했습니다.</li></ul>
       
       
@@ -60,7 +58,6 @@
       <div class="entry-heading"><h3>User Profile Memory · 대화 기반 개인화 메모리</h3><p class="date">2025 – 2026</p></div>
       <p class="entry-subtitle">롯데이노베이트 · 메모리 도입 제안·평가 설계·서비스 구현 및 운영</p>
       <p class="entry-summary">세션이 달라져도 사용자 직무와 관심사를 응답에 활용할 수 있도록 사내 챗 서비스에 프로필 메모리를 설계·적용했습니다. 실제 대화로 개인화 효과를 평가하고, 대량 갱신 중 일부 작업이 실패해도 복구할 수 있도록 운영 구조를 개선했습니다.</p>
-      <div class="project-results"><div><strong>+11.46%p</strong><span>약어 해석 정확도</span></div></div>
       <ul class="entry-bullets"><li>대화 세션이 바뀌면 이전 대화에서 알게 된 사용자의 직무·관심사를 응답에 이어 쓰기 어려웠습니다. 매번 전체 대화를 입력하면 길이와 처리 시간이 늘어나므로, 반복 활용할 정보를 저장하는 <strong>프로필 메모리 도입을 제안</strong>했습니다.</li><li>사내 챗 서비스에 기존 메모리 구조를 적용하자 반복적인 LLM 호출로 갱신이 지연되고 활용되지 않는 정보가 쌓였습니다. 유용한 맥락을 보존하기 위해 <strong>무엇을 기억해야 응답이 개선되는지</strong>부터 평가하기로 했습니다.</li><li>실제 업무 대화에서 직무·관심사·기술 정보를 프로필로 구조화하고, 사용자에 따라 뜻이 달라지는 약어 해석을 개인화 평가 과제로 선정했습니다.</li><li>실제 로그로 구성한 평가 대화 454건에서 프로필 사용 여부를 비교한 결과, 약어 해석 정확도가 <strong>68.94%에서 80.40%로 개선</strong>됐습니다. 이 결과를 근거로 구조화된 프로필을 서비스에 적용했습니다.</li><li>갱신 요청이 시간 초과되면 완료 범위를 알 수 없어 전체를 재실행해야 했습니다. 사용자·대화 구간별 비동기 처리와 작업 상태 추적을 구현해 실패 구간만 재처리하고, 서빙 API 제한에 맞춰 동시 호출 수를 조절했습니다.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>FastAPI</li><li>Structured Output</li><li>User Profile Memory</li><li>비동기 처리</li></ul>
       
@@ -68,7 +65,6 @@
       <div class="entry-heading"><h3>보안관제 LLM과 추론 서비스</h3><p class="date">2025.04 – 2025.07</p></div>
       <p class="entry-subtitle">롯데이노베이트 · 데이터·과제 설계, 파인튜닝, 신뢰도 산출, 추론 API</p>
       <p class="entry-summary">별도 분류기와 설명 생성기의 판단이 어긋나는 문제를 줄이고 관제사가 판단 근거를 함께 확인할 수 있도록, 공격 여부·공격 구문·설명을 한 번에 생성하는 LLM을 개발했습니다.</p>
-      <div class="project-results"><div><strong>+7.3%p</strong><span>기존 분류 모델 대비 공격 탐지 정확도</span></div></div>
       <ul class="entry-bullets"><li>모델별 오답에서 오라벨과 근거 불일치를 찾아 데이터 담당자에게 재라벨링을 요청하고, 정제된 데이터와 통합 JSON 과제로 모델을 비교·학습했습니다. 기존 분류 모델 대비 <strong>공격 탐지 정확도 +7.3%p</strong>를 기록했습니다.</li><li>위험도 확률 라벨과 반복 추론에 쓸 지연 여유가 없어, 공격 라벨 토큰의 로그 확률로 <strong>단일 추론 기반 신뢰도</strong>를 산출했습니다. Guided Decoding으로 출력 스키마를 고정하고 vLLM·FastAPI를 보안 시스템과 연동했습니다.</li><li>기록된 추론 테스트에서 <strong>642건을 총 58.706초</strong>에 처리했습니다(해당 테스트의 총 처리 시간 기준). 방법론을 HCLT-KACL 2025 제1저자 논문으로 발표했습니다.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>PyTorch</li><li>Hugging Face</li><li>Guided Decoding</li><li>Token Log Probability</li><li>vLLM</li><li>FastAPI</li></ul>
       
@@ -76,7 +72,6 @@
       <div class="entry-heading"><h3>ORAK Game Agent Challenge · Pokémon Red Agent</h3><p class="date">2026.02 – 2026.04</p></div>
       <p class="entry-subtitle">롯데이노베이트 · Pokémon Red의 입력 전처리·진행 상태 관리·행동 결정 설계 및 구현</p>
       <p class="entry-summary">제한된 행동 횟수 안에 Pokémon Red의 진행 목표를 수행하는 게임 Agent를 개발했습니다. 환경 상태와 이동 후보는 코드로 정리하고, 모델이 현재 목표에 맞는 행동을 선택하도록 설계했습니다.</p>
-      
       <ul class="entry-bullets"><li>200 step 안에 7개 목표를 달성해야 했지만 소형 모델은 원시 관측만으로 목표와 경로를 함께 판단하기 어려웠습니다. <strong>코드가 유효한 행동 후보를 계산하고 모델이 선택하도록</strong> 역할을 나눴습니다.</li><li>지도·좌표·소지품·화면 텍스트로 진행 상태를 구성하고 Playbook에 하위 목표와 완료 조건을 명시했습니다. 그래프 탐색으로 이동 후보를 계산하고 상황별로 필요한 도구만 제공했습니다.</li><li>도구 호출의 정상 반환만으로는 행동 성공을 알 수 없어 실행 로그와 실제 상태 변화를 함께 평가했습니다. 좌표·화면·전투·소지품 변화를 근거로 반복 행동과 진행 실패를 확인했습니다.</li><li>실패 분석을 반영해 직전 행동과 상태 변화를 다음 판단에 제공하고, 상태별 유효 도구와 맵 전환 후보를 제한했습니다. 본인은 Pokémon Red를 담당했으며 팀은 Lightweight·Open Track 리더보드에서 모두 1위를 기록했습니다.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>LLM Agent</li><li>MCP</li><li>PyBoy</li><li>Graph Search</li><li>State Memory</li></ul>
       <div class="entry-links"><a href="https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025">대회 페이지</a></div>
@@ -84,7 +79,6 @@
       <div class="entry-heading"><h3>사내 AI 비서의 금융·경제 데이터 도구</h3><p class="date">2025.04 – 2025.10</p></div>
       <p class="entry-subtitle">롯데이노베이트 · Agent 도구 설계·개발·운영</p>
       <p class="entry-summary">사용자의 기업명·날짜·경제 용어를 외부 API가 요구하는 식별자로 연결해, 사내 AI 비서가 국내 주식·재무제표·거시경제 정보를 조회하도록 개발했습니다.</p>
-      
       <ul class="entry-bullets"><li>KRX·한국은행 ECOS 등과 연동하고, 기업명 매핑·후보 검색·날짜 범위와 거래일 검증·스키마 제약으로 잘못된 인자가 실제 조회로 이어지는 경로를 다뤘습니다.</li><li>캐싱, 과거 데이터 보충, 재시도·fallback과 오류 격리를 구현하고 pytest로 주요 조회·예외 경로를 검증했습니다. MCP 인터페이스로 전환해 Agent가 조회 결과를 근거로 답변할 수 있도록 연결했습니다.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>MCP</li><li>KRX</li><li>ECOS</li><li>API Validation</li><li>pytest</li></ul>
       
@@ -92,7 +86,6 @@
       <div class="entry-heading"><h3>쇼핑 컨시어지 Agent PoC · 고객 데이터 기반 개인화 추천</h3><p class="date">2025.05 – 2025.07</p></div>
       <p class="entry-subtitle">롯데이노베이트 · 고객사 추천 시나리오 조율·평가 지표 설계·DB Tool 및 Agent 워크플로우 구현</p>
       <p class="entry-summary">고객사의 회원·구매 이력과 상품 DB를 연결해 자연어 요청에 맞는 상품을 추천하는 Agent PoC입니다. 필수 조건이 불명확할 때 모델이 값을 추측하는 대신 사용자에게 확인한 뒤 추천을 이어가도록 실행 흐름을 설계했습니다.</p>
-      
       <ul class="entry-bullets"><li>기존 추천 방식은 과거 구매 이력이나 유사 사용자 데이터에 치우쳐 현재 질의의 맥락과 상품 속성을 함께 반영하기 어려웠습니다. 고객 프로필·구매 이력·상품 DB를 연결해 <strong>개인화 추천의 가능성을 검증하는 PoC</strong>로 문제를 정의했습니다.</li><li>고객사와 일반 추천·후속 조건 질의의 기대 결과를 정리하고, Smolagents 기반으로 사용자 정보와 상품 정보를 조회하는 Tool을 분리해 구현했습니다. 고객 데이터 기반 평가 지표를 설계해 호출 성공과 개인화 조건 충족을 구분했습니다.</li><li>평가에서 Tool 호출은 성공해도 사용자 조건에 맞지 않는 추천을 확인했습니다. 호출 순서와 입력값을 추적해 모델이 누락된 가격대·상품 조건을 임의로 채우는 문제를 원인으로 파악했습니다.</li><li>추측을 막는 프롬프트를 보강해도 문제가 반복돼, DB에서 확인할 정보와 사용자에게 물어야 할 조건을 분리했습니다. 필수 정보가 부족하면 <strong>실행 중단 → 추가 질문 → 답변 반영 후 재개</strong>하도록 워크플로우를 바꿨습니다.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>Smolagents</li><li>MCP</li><li>Tool Calling</li><li>사용자·상품 DB 연동</li><li>Agent 워크플로우</li></ul>
       
@@ -100,7 +93,6 @@
       <div class="entry-heading"><h3>Search Agent · 요구조건 기반 검색 과정 평가</h3><p class="date">2026.02 – 2026.06</p></div>
       <p class="entry-subtitle">롯데이노베이트 · 문제 정의·평가 기준 설계·기준 모델 재현·실험 분석 · 제1저자, AAAI 2027 심사 중</p>
       <p class="entry-summary">다단계 웹 검색 Agent의 최종 정답 뒤에 숨은 조건 검증 누락을 측정하는 연구입니다. 질문별 필수 요구조건을 검색 과정의 근거와 대조해, 정답률만으로 드러나지 않는 실패를 진단했습니다.</p>
-      
       <ul class="entry-bullets"><li>병렬 검색의 중복을 메모리로 조정하려 했으나, 순차 검색에서도 <strong>미검증 후보를 다음 탐색의 전제로 삼는 실패</strong>를 발견했습니다. 연구 문제를 검색 간 조율에서 조건 검증 누락의 진단으로 바꿨습니다.</li><li>최종 정답만으로는 이 실패를 구분할 수 없어 질문을 대상·연결 개체·세부 조건으로 분해하는 Requirement Closure Rubric을 설계했습니다. 단서 발견과 조건 충족, 근거 완결성을 각각 평가했습니다.</li><li>기존 방법의 검색 결과 선택·요약 규칙을 유지하며 10개 Agent 설정으로 150문항을 설정별 3회 반복 평가했습니다. <strong>평균 정답률 17.5%와 필수 근거를 확인한 인증 정확도 2.5%</strong>의 차이를 확인했습니다.</li><li>요구조건의 누락·중복을 정제하고 근거 해석과 점수 집계를 분리해 평가 절차를 보완했습니다. 미해결 조건을 추적하고 다음 탐색 전에 검증하는 행동을 후속 학습 목표로 제안해 AAAI 2027에 제출했습니다.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>LLM-as-a-Judge</li><li>Entity Graph</li><li>Benchmark Design</li><li>Trajectory Evaluation</li></ul>
       
@@ -108,7 +100,6 @@
       <div class="entry-heading"><h3>ECO Decoding · 엔트로피 기반 대화 생성 제어</h3><p class="date">2023 – 2025</p></div>
       <p class="entry-subtitle">성균관대학교 자연어처리 연구실 · 문제 정의·알고리즘 설계·실험 및 논문 작성 · EMNLP 2025 Main Conference 제1저자</p>
       <p class="entry-summary">대화 응답의 감정·대화행위를 제어하면서 문법 품질을 유지하기 위한 생성 방법을 연구했습니다. 토큰마다 제어 강도를 조절하는 ECO Decoding을 제안하고 자동·사람 평가와 구성 요소 실험으로 검증했습니다.</p>
-      
       <ul class="entry-bullets"><li>기존 weighted decoding은 제어 강도를 높일수록 문법·유창성이 저하됐습니다. 고정 가중치가 생성 단계별 불확실성을 반영하지 못한다고 보고 <strong>추가 언어모델 학습 없이 토큰별 제어 강도를 바꾸는 방법</strong>을 선택했습니다.</li><li>언어모델과 속성 분류기의 엔트로피로 가중치를 조절하는 ECO Decoding을 설계해, 생성 단계마다 언어모델의 출력을 보존할지 속성 제어를 강화할지 결정했습니다.</li><li>DailyDialog·MultiWOZ에서 감정·대화행위의 단일·복수 속성 제어를 평가했습니다. 유사한 문법 품질 조건에서 기존 방법과 제어 정확도를 비교하고 사람 평가로 생성 품질을 점검했습니다.</li><li>개선이 제안한 원리에서 비롯됐는지 확인하려고 품사별 엔트로피 분석, 구성 요소 제거와 반대 가중치 실험을 수행했습니다. 심사 의견에 따라 검증을 보강해 <strong>EMNLP 2025 Main Conference에 제1저자로 게재</strong>했습니다.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>PyTorch</li><li>Hugging Face Transformers</li><li>Weighted Decoding</li><li>Entropy Analysis</li><li>Ablation</li><li>Human Evaluation</li></ul>
       <div class="entry-links"><a href="https://aclanthology.org/2025.emnlp-main.1437/">논문</a><a href="https://github.com/seummin/ECODecoding">코드</a></div>
@@ -116,7 +107,6 @@
       <div class="entry-heading"><h3>스무고개 기반 LLM 추론 벤치마크</h3><p class="date">2023 – 2024</p></div>
       <p class="entry-subtitle">성균관대학교 · 벤치마크·환경 모델·상태 추적 구현</p>
       <p class="entry-summary">LLM이 질문하고 BERT 환경 모델이 Yes/No/Unknown으로 답하는 상호작용형 평가를 구성했습니다. 1,000개 통제 샘플에서 정답률과 질문 효율을 비교하고 반복 실패 유형을 분석했으며, 결과물을 소프트웨어 자산으로 등록했습니다.</p>
-      
       
       <ul class="tags" aria-label="Technologies"><li>BERT</li><li>WordNet</li><li>Interactive Evaluation</li></ul>
       

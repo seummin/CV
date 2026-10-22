@@ -66,12 +66,6 @@
           "Structured Output",
           "User Profile Memory",
           "비동기 처리"
-        ],
-        "results": [
-          {
-            "value": "+11.46%p",
-            "label": "약어 해석 정확도"
-          }
         ]
       },
       {
@@ -91,12 +85,6 @@
           "Token Log Probability",
           "vLLM",
           "FastAPI"
-        ],
-        "results": [
-          {
-            "value": "+7.3%p",
-            "label": "기존 분류 모델 대비 공격 탐지 정확도"
-          }
         ]
       },
       {
@@ -403,12 +391,6 @@
           "Structured Output",
           "User Profile Memory",
           "Asynchronous Processing"
-        ],
-        "results": [
-          {
-            "value": "+11.46%p",
-            "label": "Acronym interpretation accuracy"
-          }
         ]
       },
       {
@@ -428,12 +410,6 @@
           "Token Log Probability",
           "vLLM",
           "FastAPI"
-        ],
-        "results": [
-          {
-            "value": "+7.3 pp",
-            "label": "Attack-detection accuracy over the existing classifier"
-          }
         ]
       },
       {

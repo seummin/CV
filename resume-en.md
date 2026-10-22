@@ -146,11 +146,11 @@ Python / PyTorch / Hugging Face Transformers / Weighted Decoding / Entropy Analy
 
 ### ORAK Game Agent Challenge [Link](https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025/winners)
 
+A real-game LLM agent challenge with 117 teams and 497 participants, evaluating planning, tool use, and goal completion across Pokémon Red, StarCraft II, Super Mario, and 2048.
+
 **1st place overall · Track 2**
 
 1st on both Track 1 & 2 leaderboards · Team award, 2026
-
-A real-game LLM agent challenge with 117 teams and 497 participants, evaluating planning, tool use, and goal completion across Pokémon Red, StarCraft II, Super Mario, and 2048.
 
 ## Teaching
 

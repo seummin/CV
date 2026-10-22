@@ -106,9 +106,9 @@ def page(lang, content):
         <section class="section awards" id="awards" aria-labelledby="awards-heading">
           {heading('awards', labels)}
           <h3>{e(content['awardTitle'])} <a class="award-link" href="{e(content['awardUrl'])}">[Link]</a></h3>
+          <p class="award-description">{e(content['awardDescription'])}</p>
           <p class="award-result">{e(content['awardDetail'])}</p>
           <p class="award-note">{e(content['awardNote'])}</p>
-          <p class="award-description">{e(content['awardDescription'])}</p>
         </section>
         <section class="section" id="teaching" aria-labelledby="teaching-heading">
           {heading('teaching', labels)}{teaching}
@@ -150,7 +150,7 @@ def markdown(content, lang):
         title = f'[{item["title"]}]({item["url"]})' if item.get('url') else item['title']
         status = f' {item["status"]}.' if item["status"] else ''
         lines.extend([f'- {title}', f'  {plain(item["authors"])}. {item["venue"]}.{status}', ''])
-    lines.extend([f'## {labels["awards"]}', '', f'### {content["awardTitle"]} [Link]({content["awardUrl"]})', '', f'**{content["awardDetail"]}**', '', content['awardNote'], '', content['awardDescription'], ''])
+    lines.extend([f'## {labels["awards"]}', '', f'### {content["awardTitle"]} [Link]({content["awardUrl"]})', '', content['awardDescription'], '', f'**{content["awardDetail"]}**', '', content['awardNote'], ''])
     lines.extend([f'## {labels["teaching"]}', ''])
     for item in content['teaching']:
         lines.append(f'- {item["title"]} · {item["date"]}')

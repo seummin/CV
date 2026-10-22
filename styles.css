@@ -133,8 +133,9 @@ html:lang(ko) .sidebar h2 { letter-spacing: 0; }
 .school:last-child { margin-bottom: 0; }
 .skill { margin-bottom: var(--space-md); }
 .interest-list { padding: 0; list-style: none; font-size: .9375rem; line-height: 1.6; }
-.award-result { color: var(--accent); font-weight: 650; margin-top: var(--space-sm); }
-.award-note { color: var(--muted); font-size: var(--text-small); margin-top: var(--space-xs); }
+.award-outcome { display: flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .85rem; margin-top: .625rem; }
+.award-result { color: var(--accent); font-weight: 650; }
+.award-note { color: var(--muted); font-size: var(--text-small); }
 .award-link { color: var(--accent); font-size: var(--text-small); font-weight: 650; text-decoration: none; white-space: nowrap; }
 .award-link:hover { text-decoration: underline; }
 .award-description { margin-top: var(--space-xs); }

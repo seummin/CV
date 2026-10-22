@@ -28,10 +28,9 @@ Develop LLM-powered capabilities and AI agents for the group’s internal AI pla
 
 Graduate Research Assistant
 
-Researched controllable dialogue generation and LLM reasoning evaluation.
+Studied controllable dialogue generation grounded in natural language processing theory.
 
 - Proposed ECO Decoding to adjust attribute-control strength using token-level entropy; validated it with automatic metrics, ablations, and human evaluation.
-- Built a Twenty Questions reasoning benchmark with 1,000 samples and a BERT environment model, and registered it as a software asset.
 
 ## Selected Projects
 
@@ -128,15 +127,6 @@ Studied how to control emotion and dialogue acts while preserving grammatical qu
 Python / PyTorch / Hugging Face Transformers / Weighted Decoding / Entropy Analysis / Ablation / Human Evaluation
 [Paper](https://aclanthology.org/2025.emnlp-main.1437/)
 [Code](https://github.com/seummin/ECODecoding)
-
-### Twenty Questions Benchmark for LLM Reasoning | 2023 – 2024
-
-Sungkyunkwan University · Benchmark, environment model, and state tracking
-
-Built an interactive evaluation loop in which an LLM asks questions and a BERT environment model responds Yes/No/Unknown. Compared answer accuracy and question efficiency on 1,000 controlled samples, analyzed recurring failures, and registered the benchmark as a software asset.
-
-
-BERT / WordNet / Interactive Evaluation
 
 ## Publications
 

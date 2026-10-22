@@ -50,8 +50,8 @@
     </article><article class="entry">
       <div class="entry-heading"><h3>Sungkyunkwan University · NLP Lab</h3><p class="date">Mar 2023 – Feb 2025</p></div>
       <p class="entry-subtitle">Graduate Research Assistant</p>
-      <p class="entry-summary">Researched controllable dialogue generation and LLM reasoning evaluation.</p>
-      <ul class="entry-bullets"><li>Proposed ECO Decoding to adjust attribute-control strength using token-level entropy; validated it with automatic metrics, ablations, and human evaluation.</li><li>Built a Twenty Questions reasoning benchmark with 1,000 samples and a BERT environment model, and registered it as a software asset.</li></ul>
+      <p class="entry-summary">Studied controllable dialogue generation grounded in natural language processing theory.</p>
+      <ul class="entry-bullets"><li>Proposed ECO Decoding to adjust attribute-control strength using token-level entropy; validated it with automatic metrics, ablations, and human evaluation.</li></ul>
       
       
     </article></section><section class="section" id="projects" aria-labelledby="projects-heading"><h2 id="projects-heading">Selected Projects</h2><article class="entry">
@@ -103,13 +103,6 @@
       <ul class="entry-bullets"><li>With existing weighted decoding, stronger control degraded grammar and fluency. I attributed this tradeoff to a fixed weight that ignored uncertainty at each generation step and chose a <strong>token-wise method without additional language-model training</strong>.</li><li>I designed ECO Decoding to use entropy from the language model and attribute classifier to decide when to preserve the base distribution and when to strengthen attribute control.</li><li>On DailyDialog and MultiWOZ, I evaluated single and multiple emotion/dialogue-act attributes, compared control accuracy under similar grammatical quality, and checked generation quality with human evaluation.</li><li>To test the proposed mechanism, I analyzed entropy by part of speech and ran component removal and reversed-weight experiments. I strengthened validation after review and published the first-author paper at EMNLP 2025 Main Conference.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>PyTorch</li><li>Hugging Face Transformers</li><li>Weighted Decoding</li><li>Entropy Analysis</li><li>Ablation</li><li>Human Evaluation</li></ul>
       <div class="entry-links"><a href="https://aclanthology.org/2025.emnlp-main.1437/">Paper</a><a href="https://github.com/seummin/ECODecoding">Code</a></div>
-    </article><article class="entry">
-      <div class="entry-heading"><h3>Twenty Questions Benchmark for LLM Reasoning</h3><p class="date">2023 – 2024</p></div>
-      <p class="entry-subtitle">Sungkyunkwan University · Benchmark, environment model, and state tracking</p>
-      <p class="entry-summary">Built an interactive evaluation loop in which an LLM asks questions and a BERT environment model responds Yes/No/Unknown. Compared answer accuracy and question efficiency on 1,000 controlled samples, analyzed recurring failures, and registered the benchmark as a software asset.</p>
-      
-      <ul class="tags" aria-label="Technologies"><li>BERT</li><li>WordNet</li><li>Interactive Evaluation</li></ul>
-      
     </article></section>
         <section class="section" id="publications" aria-labelledby="publications-heading">
           <h2 id="publications-heading">Publications</h2><ol class="publication-list"><li class="publication"><span class="publication-venue">EMNLP 2025 · Main Conference</span><h3>ECO Decoding: Entropy-Based Control for Controllability and Fluency in Controllable Dialogue Generation</h3><p class="publication-authors"><strong>Seungmin Shin</strong>, Dooyoung Kim, Youngjoong Ko</p><a class="paper-link" href="https://arxiv.org/abs/2511.01568">[Paper]</a></li><li class="publication"><span class="publication-venue">AAAI 2027</span><h3>Diagnosing Premature Downstream Expansion in Multi-Hop Search Agents via Requirement Closure</h3><p class="publication-authors"><strong>Seungmin Shin</strong>, Hyunmook Cha<span class="review-status">under review</span></p></li><li class="publication"><span class="publication-venue">IEIE 2026 Summer Conference</span><h3>Acronym Meaning Selection for Improving Ambiguous Query Answering with User Profile Memory</h3><p class="publication-authors"><strong>Seungmin Shin</strong>, Kwangryun Kim, Kihun Lee, Jiwon Jeong, Junghwan Kim, Junye Park, Wonchul Kim</p></li><li class="publication"><span class="publication-venue">HCLT-KACL 2025</span><h3>Unified Inference and Confidence Calibration Method Using Large Language Models</h3><p class="publication-authors"><strong>Seungmin Shin</strong>, Daegun Kim, Ungi Lee, Kwangryun Kim, Ilho Choi, Kihun Lee, Bongji Jeon</p></li></ol>

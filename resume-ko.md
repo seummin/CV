@@ -28,10 +28,9 @@ AI Engineer · AI Tech Lab
 
 석사과정 연구원
 
-제어 가능한 대화 생성과 LLM 추론 평가를 연구했습니다.
+자연어처리 이론을 바탕으로 제어 가능한 대화 생성을 연구했습니다.
 
 - 토큰별 엔트로피로 속성 제어 강도를 조정하는 ECO Decoding을 제안하고, 자동 평가·ablation·사람 평가로 검증했습니다.
-- 1,000개 샘플과 BERT 환경 모델로 스무고개형 추론 벤치마크를 구축하고 소프트웨어 자산으로 등록했습니다.
 
 ## 주요 프로젝트
 
@@ -128,15 +127,6 @@ Python / LLM-as-a-Judge / Entity Graph / Benchmark Design / Trajectory Evaluatio
 Python / PyTorch / Hugging Face Transformers / Weighted Decoding / Entropy Analysis / Ablation / Human Evaluation
 [논문](https://aclanthology.org/2025.emnlp-main.1437/)
 [코드](https://github.com/seummin/ECODecoding)
-
-### 스무고개 기반 LLM 추론 벤치마크 | 2023 – 2024
-
-성균관대학교 · 벤치마크·환경 모델·상태 추적 구현
-
-LLM이 질문하고 BERT 환경 모델이 Yes/No/Unknown으로 답하는 상호작용형 평가를 구성했습니다. 1,000개 통제 샘플에서 정답률과 질문 효율을 비교하고 반복 실패 유형을 분석했으며, 결과물을 소프트웨어 자산으로 등록했습니다.
-
-
-BERT / WordNet / Interactive Evaluation
 
 ## 논문
 

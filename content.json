@@ -40,10 +40,9 @@
         "title": "성균관대학교 자연어처리 연구실",
         "subtitle": "석사과정 연구원",
         "date": "2023.03 – 2025.02",
-        "summary": "제어 가능한 대화 생성과 LLM 추론 평가를 연구했습니다.",
+        "summary": "자연어처리 이론을 바탕으로 제어 가능한 대화 생성을 연구했습니다.",
         "bullets": [
-          "토큰별 엔트로피로 속성 제어 강도를 조정하는 ECO Decoding을 제안하고, 자동 평가·ablation·사람 평가로 검증했습니다.",
-          "1,000개 샘플과 BERT 환경 모델로 스무고개형 추론 벤치마크를 구축하고 소프트웨어 자산으로 등록했습니다."
+          "토큰별 엔트로피로 속성 제어 강도를 조정하는 ECO Decoding을 제안하고, 자동 평가·ablation·사람 평가로 검증했습니다."
         ]
       }
     ],
@@ -202,18 +201,6 @@
             "url": "https://github.com/seummin/ECODecoding"
           }
         ]
-      },
-      {
-        "title": "스무고개 기반 LLM 추론 벤치마크",
-        "subtitle": "성균관대학교 · 벤치마크·환경 모델·상태 추적 구현",
-        "date": "2023 – 2024",
-        "summary": "LLM이 질문하고 BERT 환경 모델이 Yes/No/Unknown으로 답하는 상호작용형 평가를 구성했습니다. 1,000개 통제 샘플에서 정답률과 질문 효율을 비교하고 반복 실패 유형을 분석했으며, 결과물을 소프트웨어 자산으로 등록했습니다.",
-        "bullets": [],
-        "tags": [
-          "BERT",
-          "WordNet",
-          "Interactive Evaluation"
-        ]
       }
     ],
     "publications": [
@@ -365,10 +352,9 @@
         "title": "Sungkyunkwan University · NLP Lab",
         "subtitle": "Graduate Research Assistant",
         "date": "Mar 2023 – Feb 2025",
-        "summary": "Researched controllable dialogue generation and LLM reasoning evaluation.",
+        "summary": "Studied controllable dialogue generation grounded in natural language processing theory.",
         "bullets": [
-          "Proposed ECO Decoding to adjust attribute-control strength using token-level entropy; validated it with automatic metrics, ablations, and human evaluation.",
-          "Built a Twenty Questions reasoning benchmark with 1,000 samples and a BERT environment model, and registered it as a software asset."
+          "Proposed ECO Decoding to adjust attribute-control strength using token-level entropy; validated it with automatic metrics, ablations, and human evaluation."
         ]
       }
     ],
@@ -526,18 +512,6 @@
             "label": "Code",
             "url": "https://github.com/seummin/ECODecoding"
           }
-        ]
-      },
-      {
-        "title": "Twenty Questions Benchmark for LLM Reasoning",
-        "subtitle": "Sungkyunkwan University · Benchmark, environment model, and state tracking",
-        "date": "2023 – 2024",
-        "summary": "Built an interactive evaluation loop in which an LLM asks questions and a BERT environment model responds Yes/No/Unknown. Compared answer accuracy and question efficiency on 1,000 controlled samples, analyzed recurring failures, and registered the benchmark as a software asset.",
-        "bullets": [],
-        "tags": [
-          "BERT",
-          "WordNet",
-          "Interactive Evaluation"
         ]
       }
     ],

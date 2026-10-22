@@ -50,8 +50,8 @@
     </article><article class="entry">
       <div class="entry-heading"><h3>성균관대학교 자연어처리 연구실</h3><p class="date">2023.03 – 2025.02</p></div>
       <p class="entry-subtitle">석사과정 연구원</p>
-      <p class="entry-summary">제어 가능한 대화 생성과 LLM 추론 평가를 연구했습니다.</p>
-      <ul class="entry-bullets"><li>토큰별 엔트로피로 속성 제어 강도를 조정하는 ECO Decoding을 제안하고, 자동 평가·ablation·사람 평가로 검증했습니다.</li><li>1,000개 샘플과 BERT 환경 모델로 스무고개형 추론 벤치마크를 구축하고 소프트웨어 자산으로 등록했습니다.</li></ul>
+      <p class="entry-summary">자연어처리 이론을 바탕으로 제어 가능한 대화 생성을 연구했습니다.</p>
+      <ul class="entry-bullets"><li>토큰별 엔트로피로 속성 제어 강도를 조정하는 ECO Decoding을 제안하고, 자동 평가·ablation·사람 평가로 검증했습니다.</li></ul>
       
       
     </article></section><section class="section" id="projects" aria-labelledby="projects-heading"><h2 id="projects-heading">주요 프로젝트</h2><article class="entry">
@@ -103,13 +103,6 @@
       <ul class="entry-bullets"><li>기존 weighted decoding은 제어 강도를 높일수록 문법·유창성이 저하됐습니다. 고정 가중치가 생성 단계별 불확실성을 반영하지 못한다고 보고 <strong>추가 언어모델 학습 없이 토큰별 제어 강도를 바꾸는 방법</strong>을 선택했습니다.</li><li>언어모델과 속성 분류기의 엔트로피로 가중치를 조절하는 ECO Decoding을 설계해, 생성 단계마다 언어모델의 출력을 보존할지 속성 제어를 강화할지 결정했습니다.</li><li>DailyDialog·MultiWOZ에서 감정·대화행위의 단일·복수 속성 제어를 평가했습니다. 유사한 문법 품질 조건에서 기존 방법과 제어 정확도를 비교하고 사람 평가로 생성 품질을 점검했습니다.</li><li>개선이 제안한 원리에서 비롯됐는지 확인하려고 품사별 엔트로피 분석, 구성 요소 제거와 반대 가중치 실험을 수행했습니다. 심사 의견에 따라 검증을 보강해 <strong>EMNLP 2025 Main Conference에 제1저자로 게재</strong>했습니다.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Python</li><li>PyTorch</li><li>Hugging Face Transformers</li><li>Weighted Decoding</li><li>Entropy Analysis</li><li>Ablation</li><li>Human Evaluation</li></ul>
       <div class="entry-links"><a href="https://aclanthology.org/2025.emnlp-main.1437/">논문</a><a href="https://github.com/seummin/ECODecoding">코드</a></div>
-    </article><article class="entry">
-      <div class="entry-heading"><h3>스무고개 기반 LLM 추론 벤치마크</h3><p class="date">2023 – 2024</p></div>
-      <p class="entry-subtitle">성균관대학교 · 벤치마크·환경 모델·상태 추적 구현</p>
-      <p class="entry-summary">LLM이 질문하고 BERT 환경 모델이 Yes/No/Unknown으로 답하는 상호작용형 평가를 구성했습니다. 1,000개 통제 샘플에서 정답률과 질문 효율을 비교하고 반복 실패 유형을 분석했으며, 결과물을 소프트웨어 자산으로 등록했습니다.</p>
-      
-      <ul class="tags" aria-label="Technologies"><li>BERT</li><li>WordNet</li><li>Interactive Evaluation</li></ul>
-      
     </article></section>
         <section class="section" id="publications" aria-labelledby="publications-heading">
           <h2 id="publications-heading">논문</h2><ol class="publication-list"><li class="publication"><span class="publication-venue">EMNLP 2025 · Main Conference</span><h3>ECO Decoding: Entropy-Based Control for Controllability and Fluency in Controllable Dialogue Generation</h3><p class="publication-authors"><strong>Seungmin Shin</strong>, Dooyoung Kim, Youngjoong Ko</p><a class="paper-link" href="https://arxiv.org/abs/2511.01568">[Paper]</a></li><li class="publication"><span class="publication-venue">AAAI 2027</span><h3>Diagnosing Premature Downstream Expansion in Multi-Hop Search Agents via Requirement Closure</h3><p class="publication-authors"><strong>Seungmin Shin</strong>, Hyunmook Cha<span class="review-status">under review</span></p></li><li class="publication"><span class="publication-venue">IEIE 2026 Summer Conference</span><h3>Acronym Meaning Selection for Improving Ambiguous Query Answering with User Profile Memory</h3><p class="publication-authors"><strong>Seungmin Shin</strong>, Kwangryun Kim, Kihun Lee, Jiwon Jeong, Junghwan Kim, Junye Park, Wonchul Kim</p></li><li class="publication"><span class="publication-venue">HCLT-KACL 2025</span><h3>Unified Inference and Confidence Calibration Method Using Large Language Models</h3><p class="publication-authors"><strong>Seungmin Shin</strong>, Daegun Kim, Ungi Lee, Kwangryun Kim, Ilho Choi, Kihun Lee, Bongji Jeon</p></li></ol>

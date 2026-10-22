@@ -135,6 +135,9 @@ html:lang(ko) .sidebar h2 { letter-spacing: 0; }
 .interest-list { padding: 0; list-style: none; font-size: .9375rem; line-height: 1.6; }
 .award-result { color: var(--accent); font-weight: 650; margin-top: var(--space-sm); }
 .award-note { color: var(--muted); font-size: var(--text-small); margin-top: var(--space-xs); }
+.award-link { color: var(--accent); font-size: var(--text-small); font-weight: 650; text-decoration: none; white-space: nowrap; }
+.award-link:hover { text-decoration: underline; }
+.award-description { margin-top: var(--space-xs); }
 footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: var(--space-sm); font-size: .75rem; color: var(--muted); }
 footer a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
 .print-button { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; border: 1px solid #a3b2a8; padding: 8px 12px; border-radius: 4px; background: #fff; color: var(--muted); font-family: inherit; font-size: .8125rem; font-weight: 500; line-height: 1.25; cursor: pointer; }

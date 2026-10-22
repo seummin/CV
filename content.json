@@ -309,7 +309,9 @@
         "title": "「인공지능개론」 수업 조교",
         "date": "2017.03 – 2023.02"
       }
-    ]
+    ],
+    "awardUrl": "https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025/winners",
+    "awardDescription": "전체 117개 팀·497명이 참가해 Pokémon Red·StarCraft II·Super Mario·2048에서 LLM Agent의 계획·도구 사용·목표 달성 능력을 겨룬 대회입니다."
   },
   "en": {
     "name": "SEUNGMIN SHIN",
@@ -621,6 +623,8 @@
         "title": "Teaching assistant, Introduction to Artificial Intelligence",
         "date": "Mar 2017 – Feb 2023"
       }
-    ]
+    ],
+    "awardUrl": "https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025/winners",
+    "awardDescription": "A real-game LLM agent challenge with 117 teams and 497 participants, evaluating planning, tool use, and goal completion across Pokémon Red, StarCraft II, Super Mario, and 2048."
   }
 }

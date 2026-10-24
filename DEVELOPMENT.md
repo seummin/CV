@@ -1,24 +1,19 @@
-# Seungmin Shin · 신승민
+# Seungmin Shin, 신승민
 
-LLM · AI Agent · Agentic Memory · Evaluation
+LLM, AI Agent, Agentic Memory, Evaluation
 
-- **한국어**: [이력서 웹페이지](./index.html) · [텍스트 버전](./resume-ko.md)
-- **English**: [CV webpage](./en.html) · [Text version](./resume-en.md)
+- **한국어**: [이력서 웹페이지](./ko.html), [텍스트 버전](./resume-ko.md)
+- **English**: [CV webpage](./en.html), [Text version](./resume-en.md)
 
-The website is published at https://seummin.github.io/CV/ (Korean) and https://seummin.github.io/CV/en.html (English). GitHub Pages uses the public repository’s main branch and root directory. The README also renders the Korean CV directly, and `resume-en.md` renders the English CV.
+The website is published at https://seummin.github.io/CV/ (English by default) and https://seummin.github.io/CV/ko.html (Korean). GitHub Pages uses the public repository’s main branch and root directory. The README also renders the Korean CV directly, and `resume-en.md` renders the English CV.
 
 ## Preview and edit
 
-No package installation or frontend build tool is required. The generated HTML is complete and can be read without JavaScript. JavaScript only enables the print button.
+The published website uses `index.html` as an English-default redirect, `en.html` for English, and `ko.html` for Korean. Edit these HTML files directly and keep `README.md`, `resume-ko.md`, and `resume-en.md` synchronized. Styling is in `styles.css`.
 
-```sh
-python3 build.py
-python3 -m http.server 8000
-```
+`content.json` and `build.py` are legacy sources from the earlier layout. Do not run `build.py` for the current website: it would overwrite the reviewed content and layout with an older version.
 
-Open `http://localhost:8000/`. Edit the Korean and English records in `content.json`, run `python3 build.py`, and commit the generated HTML and Markdown along with the source. The generator validates section counts, anchor targets, and relative links.
-
-Use **인쇄 / PDF 저장** or **Print / Save PDF** to open the browser print dialog. The print stylesheet uses A4 pages, hides navigation, and preserves text and links. Choose “Save as PDF” in the browser dialog to export.
+The site requires no frontend build. GitHub Pages publishes the root directory of `main`. No PDF upload is required.
 
 ## GitHub Pages
 

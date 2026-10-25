@@ -10,7 +10,7 @@ AI Engineer, LLM & AI Agents
 
 seungminshin00@gmail.com, +82 10 4522 0340, https://github.com/seummin
 
-I am an AI Engineer who turns problems encountered in services into research questions and applies experimentally validated methods to those services. I develop AI agents and user memory systems, analyzing real user requests and execution traces to identify failures missed by existing evaluations and design solutions that fit service goals and operational constraints. I published first-author research on controllable dialogue generation at EMNLP 2025 Main Conference.
+I am an AI Engineer who turns problems encountered in services into research questions and implements research ideas as systems ready for real-world operation. While developing AI agents and user memory systems, I analyzed user requests and execution traces to identify failures missed by existing evaluations, then designed and applied solutions suited to service goals and operational constraints. I published first-author research on controllable dialogue generation at EMNLP 2025 Main Conference.
 
 ## Experience
 
@@ -18,7 +18,7 @@ I am an AI Engineer who turns problems encountered in services into research que
 
 AI Engineer, AI Tech Lab
 
-Developed LLM-powered capabilities and AI agents for the group’s internal AI platform and client services. Analyzed business requirements to define the problems to solve and the scope of service deployment.
+Developed LLM capabilities and AI agents for the group’s internal AI platform and client services. Proposed architectures suited to the service requirements of business teams and clients, and deployed them into operation through evaluation and iterative improvement.
 
 - Designed agent architectures for internal services and client PoCs. Implemented MCP-based tools that connect databases and external APIs, along with personalization based on user information. Defined agent roles and execution flows around task characteristics and the reasoning capabilities of the models.
 - Analyzed research contributions and limitations, and validated their applicability in service environments. Adapted methods to limited data and operational constraints, connecting model training and evaluation with serving and operations to translate research into deployed services.

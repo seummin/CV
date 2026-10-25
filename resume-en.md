@@ -54,7 +54,7 @@ Python / FastAPI / Structured Output / User Profile Memory / Asynchronous Proces
 
 Led framework proposal, memory design and comparative evaluation
 
-A long-term memory framework for the internal platform that reuses information and execution experience from multiple conversations in subsequent tasks. It combines Facts preserving information and sources, Wikis integrating work context, and experience memory recording execution processes and lessons learned.
+Designed and implemented a long-term memory framework for the internal platform that reuses work information, change histories, and execution experience from multiple conversations in subsequent tasks. The framework combines Facts preserving information and sources, Wikis integrating work context, and experience memory recording execution processes and lessons learned. I validated its performance through comparative evaluation against existing memory frameworks.
 
 - Retrieving past conversations alone required reconstructing work change histories and currently applicable rules, while Wiki-based summaries omitted values, effective dates, and conditions. I concluded that fact preservation should be separated from context integration and designed a graph connecting work Wikis to Facts that preserve entities, values, dates, speakers, and sources. New information integrates changes and effective dates while retaining existing evidence.
 - Retrieving individual Facts alone can miss the overall work context, while retrieving only integrated Wikis can miss precise values and conditions. I structured retrieval to identify relationships and current state in Wikis, then consult linked Facts for detailed evidence.

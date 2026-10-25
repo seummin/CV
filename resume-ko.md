@@ -69,7 +69,7 @@ Long-term Memory / LLM Wiki / Search Strategy / Benchmark Evaluation
 - Pokémon Red Agent 개발을 담당해 팀의 대회 1위 달성에 기여했습니다.
 
 장기수행 에이전트 / Agent Workflow / LLM Agent / State Memory / MCP
-[대회 페이지](https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025)
+[대회 페이지](https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025) / [코드](https://github.com/seummin/orak-2025-starter-kit)
 
 ### 쇼핑 컨시어지 Agent PoC, 고객 데이터 기반 개인화 추천 | 2025.05 – 2025.07
 

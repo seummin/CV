@@ -10,7 +10,7 @@
   <link rel="alternate" hreflang="en" href="./en.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23477560'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='38' fill='white'%3ES%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="./PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=21">
+  <link rel="stylesheet" href="./styles.css?v=22">
 </head>
 <body id="top">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -69,7 +69,7 @@
       <p class="entry-summary">Developed a Pokémon Red game agent that achieved progress objectives within 200 steps by accounting for the model’s reasoning capabilities. The agent performs exploration, movement, dialogue, and battle under a limited action budget.</p>
       <ul class="entry-bullets"><li>Asking small models to perform the compound reasoning handled by frontier models led to coordinate errors and repeated actions. I identified the burden of jointly determining the current objective, movement route, and next action from raw game state as a major cause.</li><li>To reduce the scope of each decision, I separated objective setting, movement, dialogue, and battle. I designed the agent workflow to provide the current subgoal and completion criteria, with state-specific information and tools so the model could focus on one task at a time.</li><li>Even after task decomposition, small models made errors in judging traversability and routes and failed to reach the objective within the step budget. I precomputed movement candidates with graph search and reformulated the task as selecting a candidate suited to the current objective. After the change, small models could select valid moves and progress, reaching the objective within 200 steps.</li><li>I found cases where successful tool calls produced no actual movement or progress. I compared coordinates, screen state, battle state, and inventory before and after execution to identify invalid actions and repeated failures, then incorporated the previous action and observed state changes into the next decision.</li><li>I developed the Pokémon Red agent, contributing to the team’s first-place competition finish.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>Long-Horizon Agent</li><li>Agent Workflow</li><li>LLM Agent</li><li>State Memory</li><li>MCP</li></ul>
-      <div class="entry-links"><a href="https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025">Competition</a></div>
+      <div class="entry-links"><a href="https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025">Competition</a><a href="https://github.com/seummin/orak-2025-starter-kit">Code</a></div>
     </article><article class="entry">
       <div class="entry-heading"><h3>Shopping Concierge Agent PoC, Data-Driven Recommendations</h3><p class="date">May 2025 – Jul 2025</p></div>
       <p class="entry-summary">Connected a client’s customer profiles, purchase history, and product database to recommend products from natural-language requests. Designed the flow to clarify missing constraints rather than let the model invent them.</p>

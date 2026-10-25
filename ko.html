@@ -10,7 +10,7 @@
   <link rel="alternate" hreflang="en" href="./en.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23477560'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='38' fill='white'%3ES%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="./PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=21">
+  <link rel="stylesheet" href="./styles.css?v=22">
 </head>
 <body id="top">
   <a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
@@ -69,7 +69,7 @@
       <p class="entry-summary">모델의 추론 능력을 고려해 Pokémon Red의 진행 목표를 200 step 안에 달성하는 게임 Agent를 개발했습니다. 제한된 행동 횟수 안에 탐색과 이동, 대화, 전투를 수행하도록 구성했습니다.</p>
       <ul class="entry-bullets"><li>프론티어 모델이 처리하던 복합 판단을 소형 모델에 요구하자 좌표 오류와 반복 행동이 발생했습니다. 원시 게임 상태에서 현재 목표와 이동 경로, 실행할 행동을 동시에 판단해야 하는 부담이 주요 원인이라고 분석했습니다.</li><li>모델이 한 번에 수행할 판단의 범위를 줄이기 위해 목표 설정과 이동, 대화, 전투를 분리했습니다. 현재 하위 목표와 완료 조건을 제공하고, 상태별로 필요한 정보와 도구를 구성해 한 번에 하나의 과제에 집중하도록 Agent 워크플로우를 설계했습니다.</li><li>과제를 분리한 뒤에도 소형 모델은 이동 가능 여부와 경로 판단에서 오류를 보여, 주어진 step 안에 목표를 달성하지 못했습니다. 그래프 탐색으로 이동 후보를 미리 계산하고, 모델이 현재 목표에 적합한 후보를 선택하도록 과제를 전환했습니다. 변경 후에는 소형 모델도 유효한 이동을 선택하며 진행했고, 200 step 안에 목표를 달성했습니다.</li><li>도구 호출이 정상적으로 끝나도 실제 이동이나 목표 진행이 이뤄지지 않는 사례를 확인했습니다. 실행 전후의 좌표와 화면, 전투 및 소지품 변화를 비교해 무효 행동과 반복 실패를 점검하고, 직전 행동과 상태 변화를 다음 판단에 반영하도록 개선했습니다.</li><li>Pokémon Red Agent 개발을 담당해 팀의 대회 1위 달성에 기여했습니다.</li></ul>
       <ul class="tags" aria-label="Technologies"><li>장기수행 에이전트</li><li>Agent Workflow</li><li>LLM Agent</li><li>State Memory</li><li>MCP</li></ul>
-      <div class="entry-links"><a href="https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025">대회 페이지</a></div>
+      <div class="entry-links"><a href="https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025">대회 페이지</a><a href="https://github.com/seummin/orak-2025-starter-kit">코드</a></div>
     </article><article class="entry">
       <div class="entry-heading"><h3>쇼핑 컨시어지 Agent PoC, 고객 데이터 기반 개인화 추천</h3><p class="date">2025.05 – 2025.07</p></div>
       <p class="entry-summary">고객사의 회원, 구매 이력과 상품 DB를 연결해 자연어 요청에 맞는 상품을 추천하는 Agent PoC입니다. 필수 조건이 불명확할 때 모델이 값을 추측하는 대신 사용자에게 확인한 뒤 추천을 이어가도록 실행 흐름을 설계했습니다.</p>

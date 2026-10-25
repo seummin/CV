@@ -70,7 +70,7 @@ Developed a Pokémon Red game agent that achieved progress objectives within 200
 - I developed the Pokémon Red agent, contributing to the team’s first-place competition finish.
 
 Long-Horizon Agent / Agent Workflow / LLM Agent / State Memory / MCP
-[Competition](https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025)
+[Competition](https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025) / [Code](https://github.com/seummin/orak-2025-starter-kit)
 
 ### Shopping Concierge Agent PoC, Data-Driven Recommendations | May 2025 – Jul 2025
 

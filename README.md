@@ -150,7 +150,7 @@ Controllable Generation / Decoding Strategy / Weighted Decoding / Entropy Analys
 
 ### ORAK Game Agent Challenge, 1위
 
-117개 팀이 텍스트와 시각 기반 게임 상태를 해석하고 MCP 도구로 행동하는 LLM Agent를 개발해, 여러 게임에서 계획, 추론, 목표 달성 능력을 겨룬 대회입니다.
+세계 117개 팀이 텍스트와 시각 기반 게임 상태를 해석하고 MCP 도구로 행동하는 LLM Agent를 개발해, 여러 게임에서 계획, 추론, 목표 달성 능력을 겨룬 대회입니다.
 
 [Link](https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025/winners)
 

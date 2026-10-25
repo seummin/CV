@@ -150,7 +150,7 @@ Controllable Generation / Decoding Strategy / Weighted Decoding / Entropy Analys
 
 ### ORAK Game Agent Challenge, 1st place
 
-117 teams developed MCP-connected LLM agents that interpret textual and visual game states to plan actions, use tools, and complete objectives across multiple games.
+117 teams from around the world developed MCP-connected LLM agents that interpret textual and visual game states to plan actions, use tools, and complete objectives across multiple games.
 
 [Link](https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025/winners)
 

@@ -149,7 +149,7 @@ Controllable Generation / Decoding Strategy / Weighted Decoding / Entropy Analys
 
 ### ORAK Game Agent Challenge [Link](https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025/winners)
 
-117개 팀이 게임 환경에서 LLM Agent의 계획, 도구 사용, 목표 달성 능력을 겨룬 대회입니다.
+세계 117개 팀이 게임 환경에서 LLM Agent의 계획, 도구 사용, 목표 달성 능력을 겨룬 대회입니다.
 
 **Track 2 종합 1위**, Track 1, 2 리더보드 모두 1위, 팀 수상, 2026
 

@@ -39,8 +39,6 @@ Built a foundation in natural language structure and semantic representation, la
 
 ### User Profile Memory, Conversation-Based Personalization | 2025 – 2026
 
-Memory proposal, evaluation design, service implementation and operations
-
 Identified a user-context retention problem in an internal chat service and proposed profile memory tailored to the platform. I designed evaluation metrics to quantitatively validate personalization and implemented operations supporting bulk updates and retries of failed segments.
 
 - I identified that users of the internal platform’s chat service had to repeatedly explain their backgrounds and proposed profile memory to preserve reusable information separately from conversation history.
@@ -52,8 +50,6 @@ Python / FastAPI / Structured Output / User Profile Memory / Asynchronous Proces
 
 ### Long-Term Memory for Work Context and Execution Experience | Aug 2026 – Present
 
-Led framework proposal, memory design and comparative evaluation
-
 Designed and implemented a long-term memory framework for the internal platform that reuses work information, change histories, and execution experience from multiple conversations in subsequent tasks. The framework combines Facts preserving information and sources, Wikis integrating work context, and experience memory recording execution processes and lessons learned. I validated its performance through comparative evaluation against existing memory frameworks.
 
 - Retrieving past conversations alone required reconstructing work change histories and currently applicable rules, while Wiki-based summaries omitted values, effective dates, and conditions. I concluded that fact preservation should be separated from context integration and designed a graph connecting work Wikis to Facts that preserve entities, values, dates, speakers, and sources. New information integrates changes and effective dates while retaining existing evidence.
@@ -64,8 +60,6 @@ Designed and implemented a long-term memory framework for the internal platform 
 Long-term Memory / LLM Wiki / Search Strategy / Benchmark Evaluation
 
 ### ORAK Game Agent Challenge, Pokémon Red Agent | Feb 2026 – Apr 2026
-
-Pokémon Red observation preprocessing, progress state and action design
 
 Developed a Pokémon Red game agent that achieved progress objectives within 200 steps by accounting for the model’s reasoning capabilities. The agent performs exploration, movement, dialogue, and battle under a limited action budget.
 
@@ -79,8 +73,6 @@ Long-Horizon Agent / Agent Workflow / LLM Agent / State Memory / MCP
 [Competition](https://www.aicrowd.com/challenges/orak-game-agent-challenge-2025)
 
 ### Shopping Concierge Agent PoC, Data-Driven Recommendations | May 2025 – Jul 2025
-
-Client scenario alignment, evaluation metrics, DB tools and agent workflow
 
 Connected a client’s customer profiles, purchase history, and product database to recommend products from natural-language requests. Designed the flow to clarify missing constraints rather than let the model invent them.
 
@@ -105,8 +97,6 @@ Developed and operated a financial and economic agent for an internal AI assista
 
 ### Search Agent, Requirement-Aware Trajectory Evaluation | Feb 2026 – Jun 2026
 
-AAAI 2027, Problem definition, rubric design, baseline reproduction and analysis
-
 Discovered and analyzed a failure pattern in which search agents use unverified intermediate candidates as premises for subsequent search. I designed an evaluation framework to diagnose search-process problems hidden by final-answer accuracy and proposed improvements through comparative analysis across multiple agent configurations.
 
 - I initially explored memory to coordinate redundant parallel searches, but found that sequential agents also continued searching based on candidates whose conditions had not been fully verified. Before addressing parallel coordination, I reframed the research question around analyzing how agents move from candidate discovery to further search without sufficient verification.
@@ -117,8 +107,6 @@ Discovered and analyzed a failure pattern in which search agents use unverified 
 Python / LLM-as-a-Judge / Entity Graph / Benchmark Design / Trajectory Evaluation
 
 ### ECO Decoding, Entropy-Based Dialogue Control | 2023 – 2025
-
-EMNLP 2025 Main Conference first author, Problem definition, algorithm, experiments and writing
 
 Research on ECO Decoding, a method for controlling emotion and dialogue acts in generated responses while preserving grammatical quality.
 

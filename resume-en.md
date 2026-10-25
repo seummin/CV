@@ -106,7 +106,7 @@ Developed and operated a financial and economic agent for an internal AI assista
 
 ### Search Agent, Requirement-Aware Trajectory Evaluation | Feb 2026 – Jun 2026
 
-Problem definition, rubric design, baseline reproduction and analysis, First author, AAAI 2027 under review
+AAAI 2027, Problem definition, rubric design, baseline reproduction and analysis
 
 Research on diagnosing missing condition verification in search agents that final-answer accuracy alone does not reveal. I defined the problem, designed evaluation criteria, reproduced baseline agents, and analyzed the experiments.
 

@@ -101,6 +101,10 @@ h3 { color: var(--heading); font-size: 1.1875rem; font-weight: 700; }
 .entry-heading .date { white-space: nowrap; flex-shrink: 0; }
 .entry-subtitle { color: var(--muted); font-size: var(--text-small); margin: .375rem 0 .625rem; line-height: 1.5; }
 .entry-summary { font-size: var(--text-base); max-inline-size: var(--measure); margin-bottom: .625rem; line-height: var(--body-leading); }
+/* A quiet surface separates project summaries from detailed evidence. */
+@media screen {
+  #projects .entry-summary, #research .entry-summary { background: #f5f7fa; padding: 12px 16px; border-radius: 6px; }
+}
 .entry-bullets { max-inline-size: var(--measure); padding-left: 22px; font-size: var(--text-base); line-height: var(--body-leading); }
 .teaching-list { list-style: none; padding: 0; font-size: var(--text-small); font-weight: 400; line-height: 1.6; }
 .teaching-list li { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: .25rem 1.25rem; padding: .5rem 0; border-bottom: 1px solid var(--line); }
